@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Police Dispatch Simulation Hub</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- Firebase SDK (Compat mode for easy script tag usage) -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+
+  <style>
+    :root {
+      --bg-dark: #070913;
+      --panel-bg: rgba(13, 17, 39, 0.7);
+      --border-color: rgba(0, 242, 254, 0.2);
+      --glow-color: rgba(0, 242, 254, 0.4);
+      --accent-cyan: #00f2fe;
+      --accent-blue: #4facfe;
+      --accent-purple: #7f00ff;
+      --severity-low: #00e676;
+      --severity-med: #ffd600;
+      --severity-high: #ff9100;
+      --severity-crit: #ff1744;
+      --text-main: #e0e6ed;
+      --text-muted: #8892b0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(20, 30, 80, 0.3) 0, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(10, 80, 100, 0.2) 0, transparent 50%);
+      color: var(--text-main);
+      font-family: 'Rajdhani', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.3);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-cyan);
+    }
+
+    header {
+      background: rgba(7, 9, 19, 0.85);
+      border-bottom: 2px solid var(--accent-cyan);
+      box-shadow: 0 4px 20px rgba(0, 242, 254, 0.15);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-glow {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--accent-cyan);
+      box-shadow: 0 0 15px var(--accent-cyan);
+      animation: pulse 2s infinite;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: linear-gradient(45deg, var(--accent-cyan), var(--accent-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+    }
+
+    .api-status-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.95rem;
+      background: rgba(0, 242, 254, 0.08);
+      border: 1px solid var(--border-color);
+      padding: 6px 14px;
+      border-radius: 4px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--severity-low);
+      box-shadow: 0 0 8px var(--severity-low);
+    }
+
+    .status-dot.offline {
+      background: var(--severity-crit);
+      box-shadow: 0 0 8px var(--severity-crit);
+    }
+
+    /* Layout Wrapper */
+    .main-container {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      height: calc(100vh - 65px);
+    }
+
+    /* Left Sidebar: Controls & Auth */
+    .sidebar {
+      background: rgba(5, 7, 18, 0.95);
+      border-right: 1px solid var(--border-color);
+      padding: 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .panel {
+      background: var(--panel-bg);
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+      padding: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .panel::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--accent-cyan);
+    }
+
+    .panel-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      color: var(--accent-cyan);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .form-input {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(0, 242, 254, 0.15);
+      color: var(--text-main);
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 10px rgba(0, 242, 254, 0.25);
+    }
+
+    .btn {
+      width: 100%;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+      border: none;
+      color: #000;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 900;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 242, 254, 0.4);
+      filter: brightness(1.1);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(0, 242, 254, 0.1);
+      color: #fff;
+    }
+
+    /* Content Area */
+    .content-area {
+      display: grid;
+      grid-template-rows: 1fr 200px;
+      overflow: hidden;
+    }
+
+    .workspace-tabs {
+      background: rgba(5, 7, 18, 0.5);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      gap: 5px;
+      padding: 10px 20px 0 20px;
+    }
+
+    .tab-btn {
+      background: rgba(13, 17, 39, 0.5);
+      border: 1px solid var(--border-color);
+      border-bottom: none;
+      color: var(--text-muted);
+      padding: 8px 20px;
+      border-radius: 6px 6px 0 0;
+      cursor: pointer;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+    }
+
+    .tab-btn:hover {
+      color: var(--accent-cyan);
+      background: rgba(13, 17, 39, 0.8);
+    }
+
+    .tab-btn.active {
+      color: #000;
+      background: var(--accent-cyan);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 -4px 10px rgba(0, 242, 254, 0.2);
+    }
+
+    .tab-content-container {
+      padding: 20px;
+      overflow-y: auto;
+      height: 100%;
+    }
+
+    .tab-content {
+      display: none;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      height: 100%;
+    }
+
+    .tab-content.active {
+      display: grid;
+    }
+
+    /* Map Interface */
+    .map-panel {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 20px;
+      background: rgba(13, 17, 39, 0.4);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 15px;
+      min-height: 400px;
+    }
+
+    .map-container {
+      position: relative;
+      background: #03050c;
+      border: 1px solid rgba(0, 242, 254, 0.1);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 242, 254, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 242, 254, 0.03) 1px, transparent 1px);
+    }
+
+    .map-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      overflow-y: auto;
+    }
+
+    /* Info Lists */
+    .data-list {
+      max-height: 250px;
+      overflow-y: auto;
+      border: 1px solid rgba(0, 242, 254, 0.1);
+      border-radius: 4px;
+      background: rgba(0,0,0,0.3);
+    }
+
+    .data-item {
+      padding: 10px 14px;
+      border-bottom: 1px solid rgba(0, 242, 254, 0.05);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .data-item:hover {
+      background: rgba(0, 242, 254, 0.05);
+    }
+
+    .data-item.selected {
+      background: rgba(0, 242, 254, 0.12);
+      border-left: 3px solid var(--accent-cyan);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: 'Share Tech Mono', monospace;
+    }
+
+    .badge-crit { background: rgba(255, 23, 68, 0.15); color: var(--severity-crit); border: 1px solid var(--severity-crit); }
+    .badge-high { background: rgba(255, 145, 0, 0.15); color: var(--severity-high); border: 1px solid var(--severity-high); }
+    .badge-med { background: rgba(255, 214, 0, 0.15); color: var(--severity-med); border: 1px solid var(--severity-med); }
+    .badge-low { background: rgba(0, 230, 118, 0.15); color: var(--severity-low); border: 1px solid var(--severity-low); }
+
+    .status-badge {
+      font-family: 'Share Tech Mono', monospace;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+    .status-available { background: rgba(0, 230, 118, 0.15); color: var(--severity-low); border: 1px solid var(--severity-low); }
+    .status-busy { background: rgba(255, 23, 68, 0.15); color: var(--severity-crit); border: 1px solid var(--severity-crit); }
+
+    /* Logger Panel */
+    .logger-panel {
+      background: #020308;
+      border-top: 2px solid var(--border-color);
+      display: grid;
+      grid-template-rows: 35px 1fr;
+      overflow: hidden;
+    }
+
+    .logger-header {
+      background: rgba(13, 17, 39, 0.9);
+      border-bottom: 1px solid rgba(0, 242, 254, 0.1);
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+
+    .clear-log-btn {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--text-muted);
+      padding: 2px 10px;
+      font-size: 0.75rem;
+      border-radius: 3px;
+      cursor: pointer;
+      font-family: 'Share Tech Mono', monospace;
+    }
+
+    .clear-log-btn:hover {
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    .logger-content {
+      padding: 10px 20px;
+      overflow-y: auto;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.85rem;
+      color: #88ff88;
+    }
+
+    .log-entry {
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      line-height: 1.4;
+    }
+
+    .log-timestamp { color: var(--text-muted); }
+    .log-method { font-weight: bold; }
+    .log-method.GET { color: var(--accent-blue); }
+    .log-method.POST { color: var(--severity-low); }
+    .log-method.PUT { color: var(--severity-high); }
+    .log-url { color: var(--accent-cyan); }
+    .log-status { font-weight: bold; }
+    .log-status.success { color: var(--severity-low); }
+    .log-status.error { color: var(--severity-crit); }
+    .log-body { color: #ccc; margin-top: 4px; white-space: pre-wrap; font-size: 0.8rem; }
+
+    /* Helper styles */
+    .flex-row { display: flex; gap: 10px; align-items: center; }
+    .flex-space { display: flex; justify-content: space-between; align-items: center; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .mt-15 { margin-top: 15px; }
+    .text-center { text-align: center; }
+    .highlight { color: var(--accent-cyan); font-weight: bold; }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 5px var(--accent-cyan); }
+      50% { box-shadow: 0 0 20px var(--accent-cyan); }
+      100% { box-shadow: 0 0 5px var(--accent-cyan); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <div class="logo-glow"></div>
+      <h1>Police Dispatch Hub</h1>
+    </div>
+    <div class="api-status-badge">
+      API STATUS: <span id="api-status" class="status-dot"></span> <span id="api-status-text">CONNECTING</span>
+    </div>
+  </header>
+
+  <!-- Main Grid Layout -->
+  <div class="main-container">
+    
+    <!-- Sidebar: Config & Simulation Settings -->
+    <div class="sidebar">
+      <!-- Connection Panel -->
+      <div class="panel">
+        <div class="panel-title">API Server Config</div>
+        <div class="form-group">
+          <label>Base Server URL</label>
+          <input type="text" id="cfg-server-url" class="form-input" value="https://police-dispatch-server.onrender.com">
+        </div>
+        <button id="btn-ping" class="btn btn-secondary">Ping Server</button>
+      </div>
+
+      <!-- Auth config Panel -->
+      <div class="panel">
+        <div class="panel-title">Authentication Auth</div>
+        <div class="form-group">
+          <label>Manual Bearer Token (JWT)</label>
+          <input type="text" id="cfg-token" class="form-input" placeholder="Paste Firebase ID Token here...">
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; line-height: 1.3;">
+          * Note: You must provide a valid Firebase Auth bearer token to make protected API calls. Paste a token directly, or input Firebase configuration below to sign in.
+        </div>
+        <button id="btn-toggle-fb" class="btn btn-secondary" style="margin-bottom: 8px;">Show Firebase Login Setup</button>
+
+        <div id="fb-config-section" style="display: none; border-top: 1px solid rgba(0,242,254,0.1); padding-top: 12px; margin-top: 12px;">
+          <div class="form-group">
+            <label>Firebase API Key</label>
+            <input type="text" id="fb-apikey" class="form-input" placeholder="ApiKey">
+          </div>
+          <div class="form-group">
+            <label>Auth Domain</label>
+            <input type="text" id="fb-authdomain" class="form-input" placeholder="project-id.firebaseapp.com">
+          </div>
+          <div class="form-group">
+            <label>Project ID</label>
+            <input type="text" id="fb-projectid" class="form-input" placeholder="project-id">
+          </div>
+          <div class="grid-2">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="fb-email" class="form-input" placeholder="officer@dispatch.com">
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" id="fb-password" class="form-input" placeholder="••••••••">
+            </div>
+          </div>
+          <div class="grid-2" style="margin-top: 8px;">
+            <button id="btn-fb-register" class="btn btn-secondary" style="font-size: 0.75rem;">Create Account</button>
+            <button id="btn-fb-login" class="btn" style="font-size: 0.75rem;">Sign In</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Simulator Reset / Seeder -->
+      <div class="panel">
+        <div class="panel-title">Dry-Run Control</div>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; line-height: 1.4;">
+          This environment allows you to simulate the complete auto-dispatch matrix locally. Try selecting a hotspot and dispatching, or modifying an officer's position on the canvas.
+        </p>
+        <button id="btn-refresh-all" class="btn" style="margin-bottom: 8px;">Fetch All Server Data</button>
+        <button id="btn-seed-db" class="btn btn-secondary">Seed Database Tables</button>
+      </div>
+    </div>
+
+    <!-- Right Workspace Area -->
+    <div class="content-area">
+      
+      <!-- Top Section: Interactive Map & Live Sim Details -->
+      <div class="tab-content-container">
+        
+        <!-- Tab Bar -->
+        <div class="workspace-tabs">
+          <button class="tab-btn active" onclick="switchTab('tab-simulation')">Active Sim Map</button>
+          <button class="tab-btn" onclick="switchTab('tab-admin')">Admin Console</button>
+          <button class="tab-btn" onclick="switchTab('tab-officer')">Officer Mobile Sim</button>
+        </div>
+
+        <!-- Simulation Map Tab -->
+        <div id="tab-simulation" class="tab-content active">
+          <div class="map-panel">
+            <div class="map-container">
+              <canvas id="city-map"></canvas>
+            </div>
+            <div class="map-sidebar">
+              <div class="panel" style="flex: 1; min-height: 180px; padding: 12px;">
+                <div class="panel-title" style="font-size: 0.9rem; margin-bottom: 10px;">Simulation Info</div>
+                <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 8px;">
+                  <div><span class="status-dot" style="background:#00f2fe; box-shadow:0 0 8px #00f2fe;"></span> <span class="highlight">Cyan Node:</span> Active Officer</div>
+                  <div><span class="status-dot" style="background:#ff1744; box-shadow:0 0 8px #ff1744;"></span> <span class="highlight">Red Node:</span> Hotspot (Issue)</div>
+                  <div><span class="status-dot" style="background:#ffd600; box-shadow:0 0 8px #ffd600;"></span> <span class="highlight">Yellow Line:</span> Pending Assignment</div>
+                  <div><span class="status-dot" style="background:#00e676; box-shadow:0 0 8px #00e676;"></span> <span class="highlight">Green Line:</span> Accepted Assignment</div>
+                  <div style="border-top: 1px solid rgba(0,242,254,0.1); padding-top: 10px; margin-top: 5px;">
+                    <p style="color: var(--text-muted); font-size: 0.8rem; line-height: 1.3;">
+                      💡 <strong>Tip:</strong> Click on an officer circle to select them, then **double-click** anywhere on the map to instantly change their location coordinates. The backend will recalculate and auto-assign tasks if they are available!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel" style="flex: 1.2; min-height: 180px; padding: 12px;">
+                <div class="panel-title" style="font-size: 0.9rem; margin-bottom: 10px;">Quick Selection</div>
+                <div id="selection-details" style="font-size: 0.85rem; line-height: 1.4;">
+                  <p style="color: var(--text-muted);">Select any element on the map or lists to inspect and perform quick actions here.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Admin Console Tab -->
+        <div id="tab-admin" class="tab-content">
+          <!-- Hotspots Board -->
+          <div class="panel" style="display: flex; flex-direction: column;">
+            <div class="panel-title">Active Hotspots / Issues</div>
+            <div class="data-list" id="admin-hotspots-list" style="flex: 1;">
+              <div class="text-center" style="padding: 20px; color: var(--text-muted);">No hotspots loaded. Click "Fetch All Server Data".</div>
+            </div>
+            <div class="form-group mt-15" style="border-top: 1px solid rgba(0,242,254,0.1); padding-top: 15px;">
+              <div class="panel-title" style="font-size: 0.95rem; margin-bottom: 10px;">Dispatch Center</div>
+              <div id="admin-dispatch-controls">
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 8px;">Select a hotspot from the list above to dispatch.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Officers Board -->
+          <div class="panel">
+            <div class="panel-title">Officer Deployment Board</div>
+            <div class="data-list" id="admin-officers-list" style="max-height: 400px;">
+              <div class="text-center" style="padding: 20px; color: var(--text-muted);">No officers loaded.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Officer Simulator Tab -->
+        <div id="tab-officer" class="tab-content">
+          <!-- Officer simulator configuration -->
+          <div class="panel">
+            <div class="panel-title">Simulate Officer Profile</div>
+            
+            <div class="form-group">
+              <label>Select Officer to Control</label>
+              <select id="sim-officer-select" class="form-input" style="background:#000;">
+                <option value="">-- Choose Officer --</option>
+              </select>
+            </div>
+
+            <div style="border-top: 1px solid rgba(0,242,254,0.1); margin: 15px 0; padding-top: 15px;">
+              <div class="panel-title" style="font-size: 0.95rem;">Register New Officer Profile</div>
+              <form id="form-register-officer" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                  <label>Full Name</label>
+                  <input type="text" id="reg-name" class="form-input" placeholder="Officer Name" value="Officer Jenkins">
+                </div>
+                <div class="grid-2">
+                  <div class="form-group">
+                    <label>Rank</label>
+                    <input type="text" id="reg-rank" class="form-input" placeholder="Officer / Sergeant" value="Officer">
+                  </div>
+                  <div class="form-group">
+                    <label>Role</label>
+                    <input type="text" id="reg-role" class="form-input" placeholder="Patrol / SWAT" value="Patrol">
+                  </div>
+                </div>
+                <button type="button" id="btn-register-officer" class="btn mt-15">Register on Server</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Mobile Dashboard Controls -->
+          <div class="panel" style="display: flex; flex-direction: column;">
+            <div class="panel-title">Officer Simulation Panel</div>
+            <div id="officer-sim-active-panel" style="display: none; flex: 1; flex-direction: column; gap: 15px;">
+              <div class="flex-space" style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 4px; border: 1px solid rgba(0,242,254,0.05);">
+                <div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Selected Officer</div>
+                  <div id="sim-profile-name" class="highlight" style="font-size: 1.1rem; font-weight: bold;">John Doe</div>
+                </div>
+                <div id="sim-profile-status-badge">
+                  <span class="status-badge status-available">Available</span>
+                </div>
+              </div>
+
+              <!-- Location Slider Simulators -->
+              <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 4px; border: 1px solid rgba(0,242,254,0.05);">
+                <div class="panel-title" style="font-size: 0.85rem; margin-bottom: 8px;">Coordinate Sim (Grid range: 0-100)</div>
+                <div class="form-group">
+                  <div class="flex-space"><label>Latitude Coordinate</label><span id="lbl-sim-lat" class="highlight">50.0</span></div>
+                  <input type="range" id="slider-sim-lat" min="0" max="100" step="0.5" value="50" style="width: 100%; accent-color: var(--accent-cyan);">
+                </div>
+                <div class="form-group">
+                  <div class="flex-space"><label>Longitude Coordinate</label><span id="lbl-sim-lng" class="highlight">50.0</span></div>
+                  <input type="range" id="slider-sim-lng" min="0" max="100" step="0.5" value="50" style="width: 100%; accent-color: var(--accent-cyan);">
+                </div>
+                <div class="grid-2">
+                  <button id="btn-sim-update-location" class="btn btn-secondary" style="font-size: 0.8rem;">Send Coordinates</button>
+                  <button id="btn-sim-toggle-status" class="btn" style="font-size: 0.8rem;">Change Status</button>
+                </div>
+              </div>
+
+              <!-- Assignment Inbox -->
+              <div style="flex: 1; display: flex; flex-direction: column;">
+                <div class="panel-title" style="font-size: 0.9rem; margin-bottom: 8px;">Incoming Assignments Queue</div>
+                <div class="data-list" id="officer-assignments-list" style="flex: 1; min-height: 120px;">
+                  <div class="text-center" style="padding: 15px; color: var(--text-muted);">No current tasks assigned.</div>
+                </div>
+              </div>
+            </div>
+            <div id="officer-sim-inactive-panel" class="text-center" style="padding: 40px 10px; color: var(--text-muted); flex: 1;">
+              Please select or register an officer profile first.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Section: API Log Console -->
+      <div class="logger-panel">
+        <div class="logger-header">
+          <span>API Network Activity Console</span>
+          <button id="btn-clear-logs" class="clear-log-btn">Clear Logs</button>
+        </div>
+        <div class="logger-content" id="log-console">
+          <div class="log-entry">
+            <span class="log-timestamp">[13:14:35]</span> <span class="highlight">System initialized. Configure server URL and paste Firebase Auth Token to start dry-running.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    // Constants & Global State
+    let firebaseInitialized = false;
+    let selectedTab = 'tab-simulation';
+    let selectedHotspotId = null;
+    let selectedOfficerId = null;
+    let currentSimOfficerId = null; // Officer being simulated in Mobile view
+    
+    // Server states
+    let serverOfficers = [];
+    let serverHotspots = [];
+    let serverAssignments = [];
+    
+    // Canvas setup
+    const canvas = document.getElementById('city-map');
+    const ctx = canvas.getContext('2d');
+    let canvasWidth = 600;
+    let canvasHeight = 400;
+
+    // Resize Canvas handler
+    function resizeCanvas() {
+      const container = canvas.parentElement;
+      canvasWidth = container.clientWidth;
+      canvasHeight = container.clientHeight;
+      canvas.width = canvasWidth;
+      canvas.height = canvasHeight;
+      drawMap();
+    }
+
+    // Coordinates mapping helper
+    // DB values are lat/lng (e.g. 0-100 values mapping to canvas space)
+    function toCanvasCoords(lat, lng) {
+      // Map lat: 0 -> Height, 100 -> 0 (standard vertical inversion for maps)
+      // Map lng: 0 -> 0, 100 -> Width
+      const x = (lng / 100) * canvasWidth;
+      const y = (1 - (lat / 100)) * canvasHeight;
+      return { x, y };
+    }
+
+    function toMapCoords(x, y) {
+      const lng = (x / canvasWidth) * 100;
+      const lat = (1 - (y / canvasHeight)) * 100;
+      return { 
+        lat: Math.round(lat * 10) / 10, 
+        lng: Math.round(lng * 10) / 10 
+      };
+    }
+
+    // Setup tabs
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+      
+      const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(btn => 
+        btn.getAttribute('onclick').includes(tabId)
+      );
+      if (activeBtn) activeBtn.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+      selectedTab = tabId;
+
+      if (tabId === 'tab-simulation') {
+        setTimeout(resizeCanvas, 100);
+      }
+    }
+
+    // Logger Utility
+    function logActivity(method, url, status, requestBody, responseBody) {
+      const consoleEl = document.getElementById('log-console');
+      const time = new Date().toLocaleTimeString();
+      
+      const isSuccess = status >= 200 && status < 300;
+      const statusClass = isSuccess ? 'success' : 'error';
+      
+      const entry = document.createElement('div');
+      entry.className = 'log-entry';
+      
+      let html = `<span class="log-timestamp">[${time}]</span> `;
+      html += `<span class="log-method ${method}">${method}</span> `;
+      html += `<span class="log-url">${url}</span> `;
+      html += `- Status: <span class="log-status ${statusClass}">${status}</span>`;
+      
+      if (requestBody) {
+        html += `<div class="log-body"><strong>Payload:</strong> ${JSON.stringify(requestBody, null, 2)}</div>`;
+      }
+      if (responseBody) {
+        html += `<div class="log-body" style="color: ${isSuccess ? '#88ff88' : '#ff8888'}"><strong>Response:</strong> ${JSON.stringify(responseBody, null, 2)}</div>`;
+      }
+      
+      entry.innerHTML = html;
+      consoleEl.appendChild(entry);
+      consoleEl.scrollTop = consoleEl.scrollHeight;
+    }
+
+    // Core Fetch API Wrapper
+    async function makeApiCall(endpoint, method = 'GET', body = null) {
+      const serverUrl = document.getElementById('cfg-server-url').value.trim();
+      const token = document.getElementById('cfg-token').value.trim();
+      const url = `${serverUrl}${endpoint}`;
+      
+      const headers = {
+        'Content-Type': 'application/json'
+      };
+      
+      if (token) {
+        headers['Authorization'] = `Bearer ${token}`;
+      }
+
+      const options = {
+        method,
+        headers
+      };
+
+      if (body) {
+        options.body = JSON.stringify(body);
+      }
+
+      try {
+        const response = await fetch(url, options);
+        let data = null;
+        try {
+          data = await response.json();
+        } catch (e) {
+          // Response has no json
+        }
+        logActivity(method, endpoint, response.status, body, data);
+        return { status: response.status, data };
+      } catch (err) {
+        logActivity(method, endpoint, 'FAILED', body, { error: err.message });
+        return { status: 500, data: { error: err.message } };
+      }
+    }
+
+    // Canvas Draw Map
+    function drawMap() {
+      ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+
+      // Grid background is handled by CSS, but let's draw some decorative coordinates
+      ctx.strokeStyle = 'rgba(0, 242, 254, 0.05)';
+      ctx.lineWidth = 1;
+      
+      // Draw assignments (lines)
+      // Pending = yellow/orange, Accepted = green
+      serverAssignments.forEach(assignment => {
+        if (assignment.status === 'completed' || assignment.status === 'declined') return;
+
+        const officer = serverOfficers.find(o => o.id === assignment.officer_id);
+        const hotspot = serverHotspots.find(h => h.id === assignment.hotspot_id);
+
+        if (officer && hotspot && officer.lat !== null && officer.lng !== null) {
+          const offCoords = toCanvasCoords(officer.lat, officer.lng);
+          const hotCoords = toCanvasCoords(hotspot.lat, hotspot.lng);
+
+          ctx.beginPath();
+          ctx.moveTo(offCoords.x, offCoords.y);
+          ctx.lineTo(hotCoords.x, hotCoords.y);
+          
+          if (assignment.status === 'pending') {
+            ctx.strokeStyle = '#ffd600';
+            ctx.setLineDash([4, 4]);
+          } else {
+            ctx.strokeStyle = '#00e676';
+            ctx.setLineDash([]);
+          }
+          ctx.lineWidth = 2;
+          ctx.stroke();
+          ctx.setLineDash([]); // Reset
+        }
+      });
+
+      // Draw hotspots (red dots)
+      serverHotspots.forEach(hotspot => {
+        const coords = toCanvasCoords(hotspot.lat, hotspot.lng);
+        const size = Math.max(8, hotspot.severity_score * 2.2);
+
+        // Draw pulsing outer ring
+        ctx.beginPath();
+        ctx.arc(coords.x, coords.y, size + (Math.sin(Date.now() / 200) * 3), 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255, 23, 68, 0.15)';
+        ctx.fill();
+
+        // Draw core node
+        ctx.beginPath();
+        ctx.arc(coords.x, coords.y, size * 0.6, 0, Math.PI * 2);
+        
+        if (hotspot.id === selectedHotspotId) {
+          ctx.fillStyle = '#ff1744';
+          ctx.strokeStyle = '#ffffff';
+          ctx.lineWidth = 2;
+          ctx.stroke();
+        } else {
+          ctx.fillStyle = 'rgba(255, 23, 68, 0.8)';
+        }
+        ctx.fill();
+
+        // Draw Severity Text
+        ctx.fillStyle = '#ff8888';
+        ctx.font = 'bold 11px Share Tech Mono, monospace';
+        ctx.fillText(`H-${hotspot.id} (${hotspot.risk_level})`, coords.x + size + 2, coords.y + 4);
+      });
+
+      // Draw officers (blue dots)
+      serverOfficers.forEach(officer => {
+        if (officer.lat === null || officer.lng === null) return;
+        const coords = toCanvasCoords(officer.lat, officer.lng);
+
+        ctx.beginPath();
+        ctx.arc(coords.x, coords.y, 9, 0, Math.PI * 2);
+        
+        if (officer.id === currentSimOfficerId) {
+          // Pulsing core for currently simulated officer
+          ctx.fillStyle = '#00f2fe';
+          ctx.strokeStyle = '#ffffff';
+          ctx.lineWidth = 2.5;
+          ctx.stroke();
+        } else if (officer.status === 'Available') {
+          ctx.fillStyle = '#4facfe';
+          ctx.strokeStyle = 'rgba(79, 172, 254, 0.5)';
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+        } else {
+          ctx.fillStyle = 'rgba(120, 140, 160, 0.8)';
+          ctx.strokeStyle = 'rgba(120, 140, 160, 0.3)';
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+        }
+        ctx.fill();
+
+        // Label
+        ctx.fillStyle = '#ffffff';
+        ctx.font = '11px Share Tech Mono, monospace';
+        ctx.fillText(`${officer.name} (${officer.status})`, coords.x + 12, coords.y + 4);
+      });
+    }
+
+    // Ping check
+    async function checkServerHealth() {
+      const serverUrl = document.getElementById('cfg-server-url').value.trim();
+      const badge = document.getElementById('api-status');
+      const badgeText = document.getElementById('api-status-text');
+      
+      try {
+        const response = await fetch(`${serverUrl}/health`);
+        const data = await response.json();
+        if (data.status === 'ok') {
+          badge.className = 'status-dot';
+          badgeText.innerText = 'ONLINE';
+          badgeText.style.color = 'var(--severity-low)';
+        } else {
+          throw new Error('Invalid status');
+        }
+      } catch (err) {
+        badge.className = 'status-dot offline';
+        badgeText.innerText = 'OFFLINE';
+        badgeText.style.color = 'var(--severity-crit)';
+      }
+    }
+
+    // Fetch and populate all data
+    async function fetchAllData() {
+      const serverUrl = document.getElementById('cfg-server-url').value.trim();
+      
+      // Check health
+      await checkServerHealth();
+
+      // Fetch officers
+      const resOfficers = await makeApiCall('/api/officers');
+      if (resOfficers.status === 200) {
+        serverOfficers = resOfficers.data;
+        updateOfficersListUI();
+      }
+
+      // Fetch hotspots
+      const resHotspots = await makeApiCall('/api/hotspots');
+      if (resHotspots.status === 200) {
+        serverHotspots = resHotspots.data;
+        updateHotspotsListUI();
+      }
+
+      // Fetch assignments for simulated officer if selected
+      if (currentSimOfficerId) {
+        const resAssignments = await makeApiCall(`/api/assignments/current/${currentSimOfficerId}`);
+        if (resAssignments.status === 200) {
+          serverAssignments = resAssignments.data;
+          updateAssignmentsListUI();
+        }
+      } else {
+        serverAssignments = [];
+      }
+
+      drawMap();
+      updateSelectionUI();
+    }
+
+    // Render hotspot items in Admin Console
+    function updateHotspotsListUI() {
+      const listEl = document.getElementById('admin-hotspots-list');
+      if (serverHotspots.length === 0) {
+        listEl.innerHTML = `<div class="text-center" style="padding:20px; color:var(--text-muted);">No hotspots found.</div>`;
+        return;
+      }
+
+      let html = '';
+      serverHotspots.forEach(hotspot => {
+        const isSelected = hotspot.id === selectedHotspotId;
+        const selectedClass = isSelected ? 'selected' : '';
+        let badgeClass = 'badge-low';
+        if (hotspot.risk_level === 'Critical') badgeClass = 'badge-crit';
+        else if (hotspot.risk_level === 'High') badgeClass = 'badge-high';
+        else if (hotspot.risk_level === 'Medium') badgeClass = 'badge-med';
+
+        html += `
+          <div class="data-item ${selectedClass}" onclick="selectHotspot(${hotspot.id})">
+            <div class="flex-space">
+              <span class="highlight">ID ${hotspot.id} - ${hotspot.location}</span>
+              <span class="badge ${badgeClass}">${hotspot.risk_level}</span>
+            </div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">
+              Coords: [Lat: ${hotspot.lat}, Lng: ${hotspot.lng}] | Severity: ${hotspot.severity_score}
+            </div>
+          </div>
+        `;
+      });
+      listEl.innerHTML = html;
+    }
+
+    // Render officer items in Admin Console
+    function updateOfficersListUI() {
+      const listEl = document.getElementById('admin-officers-list');
+      const selectEl = document.getElementById('sim-officer-select');
+      
+      if (serverOfficers.length === 0) {
+        listEl.innerHTML = `<div class="text-center" style="padding:20px; color:var(--text-muted);">No officers registered.</div>`;
+        selectEl.innerHTML = `<option value="">-- Choose Officer --</option>`;
+        return;
+      }
+
+      // Populate deployment list
+      let listHtml = '';
+      serverOfficers.forEach(officer => {
+        const isSelected = officer.id === selectedOfficerId;
+        const selectedClass = isSelected ? 'selected' : '';
+        const statusClass = officer.status === 'Available' ? 'status-available' : 'status-busy';
+        
+        listHtml += `
+          <div class="data-item ${selectedClass}" onclick="selectOfficer(${officer.id})">
+            <div class="flex-space">
+              <span class="highlight">${officer.name} (${officer.rank})</span>
+              <span class="status-badge ${statusClass}">${officer.status}</span>
+            </div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">
+              Coords: [${officer.lat || 'Null'}, ${officer.lng || 'Null'}] | Role: ${officer.role}
+            </div>
+          </div>
+        `;
+      });
+      listEl.innerHTML = listHtml;
+
+      // Populate select dropdown
+      let selectHtml = `<option value="">-- Choose Officer --</option>`;
+      serverOfficers.forEach(officer => {
+        const selectedAttr = officer.id === currentSimOfficerId ? 'selected' : '';
+        selectHtml += `<option value="${officer.id}" ${selectedAttr}>${officer.name} (${officer.rank})</option>`;
+      });
+      selectEl.innerHTML = selectHtml;
+    }
+
+    // Render active assignments for Simulated Officer
+    function updateAssignmentsListUI() {
+      const listEl = document.getElementById('officer-assignments-list');
+      
+      // Filter assignments for current simulation officer
+      const activeAssignments = serverAssignments.filter(a => 
+        a.officer_id === currentSimOfficerId && (a.status === 'pending' || a.status === 'accepted')
+      );
+
+      if (activeAssignments.length === 0) {
+        listEl.innerHTML = `<div class="text-center" style="padding:20px; color:var(--text-muted);">No active tasks assigned.</div>`;
+        return;
+      }
+
+      let html = '';
+      activeAssignments.forEach(assignment => {
+        const hotspot = assignment.hotspot;
+        const isPending = assignment.status === 'pending';
+        let actionButtons = '';
+
+        if (isPending) {
+          actionButtons = `
+            <div class="grid-2 mt-15">
+              <button class="btn btn-secondary" style="font-size:0.75rem; padding:6px;" onclick="declineAssignmentPrompt(${assignment.id})">Decline</button>
+              <button class="btn" style="font-size:0.75rem; padding:6px;" onclick="acceptAssignment(${assignment.id})">Accept</button>
+            </div>
+          `;
+        } else {
+          actionButtons = `
+            <button class="btn mt-15" style="font-size:0.75rem; padding:6px;" onclick="completeAssignment(${assignment.id})">Complete Assignment</button>
+          `;
+        }
+
+        html += `
+          <div style="background: rgba(0,0,0,0.3); padding: 12px; margin-bottom: 10px; border-radius: 4px; border: 1px solid rgba(0,242,254,0.1);">
+            <div class="flex-space">
+              <span class="highlight">Assignment ID: ${assignment.id}</span>
+              <span class="badge ${isPending ? 'badge-med' : 'badge-low'}">${assignment.status.toUpperCase()}</span>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px;">
+              <strong>Hotspot Location:</strong> ${hotspot.location}<br>
+              <strong>Coordinates:</strong> [${hotspot.lat}, ${hotspot.lng}]<br>
+              <strong>Risk Level:</strong> ${hotspot.risk_level} (Sev: ${hotspot.severity_score})
+            </div>
+            ${actionButtons}
+          </div>
+        `;
+      });
+      listEl.innerHTML = html;
+    }
+
+    // Select elements handlers
+    function selectHotspot(id) {
+      selectedHotspotId = id;
+      updateHotspotsListUI();
+      updateSelectionUI();
+      drawMap();
+    }
+
+    function selectOfficer(id) {
+      selectedOfficerId = id;
+      updateOfficersListUI();
+      updateSelectionUI();
+      drawMap();
+    }
+
+    // Selection details pane updating
+    function updateSelectionUI() {
+      const detailsEl = document.getElementById('selection-details');
+      const dispatchEl = document.getElementById('admin-dispatch-controls');
+
+      if (selectedHotspotId) {
+        const hotspot = serverHotspots.find(h => h.id === selectedHotspotId);
+        if (hotspot) {
+          detailsEl.innerHTML = `
+            <div style="background: rgba(255, 23, 68, 0.05); padding: 10px; border-radius: 4px; border: 1px solid rgba(255, 23, 68, 0.2);">
+              <span class="badge badge-crit" style="float: right;">HOTSPOT</span>
+              <strong style="color:var(--severity-crit)">ID ${hotspot.id} - ${hotspot.location}</strong>
+              <div style="margin-top: 8px; font-size: 0.8rem; display: grid; gap: 4px;">
+                <div>Coordinates: [Lat: ${hotspot.lat}, Lng: ${hotspot.lng}]</div>
+                <div>Risk level: ${hotspot.risk_level}</div>
+                <div>Severity Score: ${hotspot.severity_score}</div>
+              </div>
+            </div>
+          `;
+
+          // Update Admin dispatch control panel
+          let officerOptions = '<option value="">-- Auto-Dispatch Closest Officer --</option>';
+          serverOfficers.forEach(off => {
+            if (off.status === 'Available') {
+              officerOptions += `<option value="${off.id}">${off.name} (${off.rank})</option>`;
+            }
+          });
+
+          dispatchEl.innerHTML = `
+            <div class="form-group">
+              <label>Select Deployment Mode</label>
+              <select id="dispatch-officer-select" class="form-input" style="background:#000;">
+                ${officerOptions}
+              </select>
+            </div>
+            <button class="btn" onclick="dispatchHotspot(${hotspot.id})">Execute Deployment</button>
+          `;
+          return;
+        }
+      }
+
+      if (selectedOfficerId) {
+        const officer = serverOfficers.find(o => o.id === selectedOfficerId);
+        if (officer) {
+          const statusClass = officer.status === 'Available' ? 'status-available' : 'status-busy';
+          detailsEl.innerHTML = `
+            <div style="background: rgba(0, 242, 254, 0.05); padding: 10px; border-radius: 4px; border: 1px solid rgba(0, 242, 254, 0.2);">
+              <span class="status-badge ${statusClass}" style="float: right;">${officer.status}</span>
+              <strong>${officer.name} (${officer.rank})</strong>
+              <div style="margin-top: 8px; font-size: 0.8rem; display: grid; gap: 4px;">
+                <div>ID: ${officer.id}</div>
+                <div>Role: ${officer.role}</div>
+                <div>Coordinates: [${officer.lat || 'Null'}, ${officer.lng || 'Null'}]</div>
+              </div>
+              <button class="btn btn-secondary mt-15" style="font-size:0.8rem; padding:5px;" onclick="simulateThisOfficer(${officer.id})">Simulate in Mobile View</button>
+            </div>
+          `;
+          dispatchEl.innerHTML = `<p style="color: var(--text-muted); font-size: 0.85rem;">Select a hotspot to dispatch.</p>`;
+          return;
+        }
+      }
+
+      detailsEl.innerHTML = `<p style="color: var(--text-muted);">Select any element on the map or lists to inspect and perform quick actions here.</p>`;
+      dispatchEl.innerHTML = `<p style="color: var(--text-muted); font-size: 0.85rem;">Select a hotspot to dispatch.</p>`;
+    }
+
+    // Simulate an officer in Mobile view
+    function simulateThisOfficer(id) {
+      currentSimOfficerId = parseInt(id);
+      document.getElementById('sim-officer-select').value = id;
+      
+      const officer = serverOfficers.find(o => o.id === id);
+      if (officer) {
+        document.getElementById('officer-sim-inactive-panel').style.display = 'none';
+        document.getElementById('officer-sim-active-panel').style.display = 'flex';
+        document.getElementById('sim-profile-name').innerText = officer.name;
+        
+        const badgeEl = document.getElementById('sim-profile-status-badge');
+        const statusClass = officer.status === 'Available' ? 'status-available' : 'status-busy';
+        badgeEl.innerHTML = `<span class="status-badge ${statusClass}">${officer.status}</span>`;
+
+        // Update slider values
+        const lat = officer.lat !== null ? officer.lat : 50;
+        const lng = officer.lng !== null ? officer.lng : 50;
+        
+        document.getElementById('slider-sim-lat').value = lat;
+        document.getElementById('lbl-sim-lat').innerText = lat;
+        document.getElementById('slider-sim-lng').value = lng;
+        document.getElementById('lbl-sim-lng').innerText = lng;
+      }
+      
+      switchTab('tab-officer');
+      fetchAllData();
+    }
+
+    // Register a new officer
+    async function registerOfficer() {
+      const name = document.getElementById('reg-name').value.trim();
+      const rank = document.getElementById('reg-rank').value.trim();
+      const role = document.getElementById('reg-role').value.trim();
+
+      const res = await makeApiCall('/api/officers/register', 'POST', { name, rank, role });
+      if (res.status === 201) {
+        const newOfficer = res.data.officer;
+        currentSimOfficerId = newOfficer.id;
+        await fetchAllData();
+        simulateThisOfficer(newOfficer.id);
+      }
+    }
+
+    // Update location from slider
+    async function updateLocationSim() {
+      if (!currentSimOfficerId) return;
+      const lat = parseFloat(document.getElementById('slider-sim-lat').value);
+      const lng = parseFloat(document.getElementById('slider-sim-lng').value);
+
+      const res = await makeApiCall('/api/officers/location', 'POST', { lat, lng });
+      if (res.status === 200) {
+        await fetchAllData();
+        if (res.data.nextAssignment) {
+          alert(`Auto-Dispatch Triggered! Officer Jenkins was assigned to hotspot ${res.data.nextAssignment.hotspot.location} due to location update!`);
+        }
+      }
+    }
+
+    // Toggle Available / Busy Status
+    async function toggleStatusSim() {
+      if (!currentSimOfficerId) return;
+      const officer = serverOfficers.find(o => o.id === currentSimOfficerId);
+      if (!officer) return;
+
+      const newStatus = officer.status === 'Available' ? 'Busy' : 'Available';
+      const res = await makeApiCall('/api/officers/status', 'PUT', { status: newStatus });
+      if (res.status === 200) {
+        await fetchAllData();
+        if (newStatus === 'Available' && res.data.nextAssignment) {
+          alert(`Auto-Dispatch Triggered! Officer has been dispatched to next nearest hotspot: ${res.data.nextAssignment.hotspot.location}`);
+        }
+      }
+    }
+
+    // Dispatch Hotspot (Admin Action)
+    async function dispatchHotspot(hotspotId) {
+      const selectEl = document.getElementById('dispatch-officer-select');
+      const officerId = selectEl.value ? parseInt(selectEl.value) : null;
+
+      const body = { hotspot_id: hotspotId };
+      if (officerId) {
+        body.officer_id = officerId;
+      }
+
+      const res = await makeApiCall('/api/deployment/assign', 'POST', body);
+      if (res.status === 201) {
+        alert(`Successfully assigned Deployment. Assigned Officer ID: ${res.data.officer_id}`);
+        await fetchAllData();
+      } else {
+        alert(`Failed to assign: ${res.data.error || 'Unknown error'}`);
+      }
+    }
+
+    // Accept Assignment (Mobile Action)
+    async function acceptAssignment(assignmentId) {
+      const res = await makeApiCall('/api/assignments/accept', 'POST', { assignment_id: assignmentId });
+      if (res.status === 200) {
+        await fetchAllData();
+      }
+    }
+
+    // Decline Assignment Prompt
+    function declineAssignmentPrompt(assignmentId) {
+      const reason = prompt("Enter reason for declining deployment:");
+      if (reason === null) return; // User canceled
+      declineAssignment(assignmentId, reason);
+    }
+
+    // Decline Assignment (Mobile Action)
+    async function declineAssignment(assignmentId, decline_reason) {
+      const res = await makeApiCall('/api/assignments/decline', 'POST', { 
+        assignment_id: assignmentId, 
+        decline_reason: decline_reason || 'Out of area' 
+      });
+      if (res.status === 200) {
+        await fetchAllData();
+        if (res.data.nextAssignment) {
+          alert(`You declined the assignment. The server automatically found the next nearest task for you: hotspot ${res.data.nextAssignment.hotspot.location}`);
+        }
+      }
+    }
+
+    // Complete Assignment (Mobile Action)
+    async function completeAssignment(assignmentId) {
+      const res = await makeApiCall('/api/assignments/complete', 'POST', { assignment_id: assignmentId });
+      if (res.status === 200) {
+        await fetchAllData();
+        if (res.data.nextAssignment) {
+          alert(`Assignment Completed! Since you set your status to Available, the server automatically dispatched you to the next nearest hotspot: ${res.data.nextAssignment.hotspot.location}`);
+        }
+      }
+    }
+
+    // Setup Firebase Auth
+    function initFirebase() {
+      const apikey = document.getElementById('fb-apikey').value.trim();
+      const authdomain = document.getElementById('fb-authdomain').value.trim();
+      const projectid = document.getElementById('fb-projectid').value.trim();
+
+      if (!apikey || !authdomain || !projectid) {
+        alert("Please enter API Key, Auth Domain, and Project ID to initialize Firebase Client Auth.");
+        return false;
+      }
+
+      const firebaseConfig = {
+        apiKey: apikey,
+        authDomain: authdomain,
+        projectId: projectid
+      };
+
+      try {
+        firebase.initializeApp(firebaseConfig);
+        firebaseInitialized = true;
+        
+        // Setup listener
+        firebase.auth().onAuthStateChanged(async (user) => {
+          if (user) {
+            const token = await user.getIdToken();
+            document.getElementById('cfg-token').value = token;
+            logActivity('AUTH', 'Firebase Logged In', 200, null, { email: user.email, uid: user.uid });
+            fetchAllData();
+          } else {
+            document.getElementById('cfg-token').value = '';
+            logActivity('AUTH', 'Firebase Logged Out', 200, null, null);
+          }
+        });
+        
+        alert("Firebase initialized successfully! You can now log in or register.");
+        return true;
+      } catch (err) {
+        alert("Firebase Initialization failed: " + err.message);
+        return false;
+      }
+    }
+
+    // Event Listeners
+    window.addEventListener('load', () => {
+      // Check server URL from environment and save locally
+      const savedServerUrl = localStorage.getItem('police_dispatch_url');
+      if (savedServerUrl) {
+        document.getElementById('cfg-server-url').value = savedServerUrl;
+      }
+
+      const savedToken = localStorage.getItem('police_dispatch_token');
+      if (savedToken) {
+        document.getElementById('cfg-token').value = savedToken;
+      }
+
+      checkServerHealth();
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+      
+      // Periodic ping
+      setInterval(checkServerHealth, 30000);
+      
+      // Redraw loop for pulses
+      setInterval(drawMap, 1000);
+    });
+
+    // Save server details in localStorage when changed
+    document.getElementById('cfg-server-url').addEventListener('change', (e) => {
+      localStorage.setItem('police_dispatch_url', e.target.value.trim());
+      checkServerHealth();
+    });
+
+    document.getElementById('cfg-token').addEventListener('change', (e) => {
+      localStorage.setItem('police_dispatch_token', e.target.value.trim());
+    });
+
+    document.getElementById('btn-ping').addEventListener('click', checkServerHealth);
+    document.getElementById('btn-refresh-all').addEventListener('click', fetchAllData);
+    document.getElementById('btn-seed-db').addEventListener('click', async () => {
+      if (confirm("Are you sure you want to seed the database? This will insert default officers, hotspots matching your dispatch matrix, and violations.")) {
+        const res = await makeApiCall('/api/admin/seed', 'POST');
+        if (res.status === 200) {
+          alert("Database seeded successfully!");
+          await fetchAllData();
+        } else {
+          alert("Failed to seed database: " + (res.data.error || 'Check configuration or token'));
+        }
+      }
+    });
+    document.getElementById('btn-register-officer').addEventListener('click', registerOfficer);
+    document.getElementById('btn-sim-update-location').addEventListener('click', updateLocationSim);
+    document.getElementById('btn-sim-toggle-status').addEventListener('click', toggleStatusSim);
+    document.getElementById('btn-clear-logs').addEventListener('click', () => {
+      document.getElementById('log-console').innerHTML = '';
+    });
+
+    // Slide location controls
+    document.getElementById('slider-sim-lat').addEventListener('input', (e) => {
+      document.getElementById('lbl-sim-lat').innerText = e.target.value;
+    });
+    document.getElementById('slider-sim-lng').addEventListener('input', (e) => {
+      document.getElementById('lbl-sim-lng').innerText = e.target.value;
+    });
+
+    // Simulate dropdown selector
+    document.getElementById('sim-officer-select').addEventListener('change', (e) => {
+      if (e.target.value) {
+        simulateThisOfficer(e.target.value);
+      } else {
+        currentSimOfficerId = null;
+        document.getElementById('officer-sim-active-panel').style.display = 'none';
+        document.getElementById('officer-sim-inactive-panel').style.display = 'block';
+        fetchAllData();
+      }
+    });
+
+    // Firebase panel toggling
+    document.getElementById('btn-toggle-fb').addEventListener('click', (e) => {
+      const section = document.getElementById('fb-config-section');
+      if (section.style.display === 'none') {
+        section.style.display = 'block';
+        e.target.innerText = 'Hide Firebase Login Setup';
+      } else {
+        section.style.display = 'none';
+        e.target.innerText = 'Show Firebase Login Setup';
+      }
+    });
+
+    // Firebase Auth Handlers
+    document.getElementById('btn-fb-login').addEventListener('click', async () => {
+      if (!firebaseInitialized && !initFirebase()) return;
+      
+      const email = document.getElementById('fb-email').value.trim();
+      const password = document.getElementById('fb-password').value.trim();
+      
+      try {
+        await firebase.auth().signInWithEmailAndPassword(email, password);
+      } catch (err) {
+        alert("Login failed: " + err.message);
+        logActivity('AUTH', 'Login failed', 400, null, { error: err.message });
+      }
+    });
+
+    document.getElementById('btn-fb-register').addEventListener('click', async () => {
+      if (!firebaseInitialized && !initFirebase()) return;
+      
+      const email = document.getElementById('fb-email').value.trim();
+      const password = document.getElementById('fb-password').value.trim();
+      
+      try {
+        await firebase.auth().createUserWithEmailAndPassword(email, password);
+        alert("Account created successfully!");
+      } catch (err) {
+        alert("Registration failed: " + err.message);
+        logActivity('AUTH', 'Registration failed', 400, null, { error: err.message });
+      }
+    });
+
+    // Interactive canvas interactions
+    canvas.addEventListener('click', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const clickY = e.clientY - rect.top;
+
+      // Check if clicking near any officer
+      let clickedItem = null;
+      for (const officer of serverOfficers) {
+        if (officer.lat === null || officer.lng === null) continue;
+        const coords = toCanvasCoords(officer.lat, officer.lng);
+        const dist = Math.hypot(clickX - coords.x, clickY - coords.y);
+        if (dist <= 15) {
+          clickedItem = { type: 'officer', id: officer.id };
+          break;
+        }
+      }
+
+      // Check if clicking near any hotspot
+      if (!clickedItem) {
+        for (const hotspot of serverHotspots) {
+          const coords = toCanvasCoords(hotspot.lat, hotspot.lng);
+          const size = Math.max(8, hotspot.severity_score * 2.2);
+          const dist = Math.hypot(clickX - coords.x, clickY - coords.y);
+          if (dist <= size + 5) {
+            clickedItem = { type: 'hotspot', id: hotspot.id };
+            break;
+          }
+        }
+      }
+
+      if (clickedItem) {
+        if (clickedItem.type === 'officer') {
+          selectOfficer(clickedItem.id);
+        } else {
+          selectHotspot(clickedItem.id);
+        }
+      }
+    });
+
+    // Double click on canvas to set coordinates for simulated officer
+    canvas.addEventListener('dblclick', async (e) => {
+      if (!currentSimOfficerId) {
+        alert("Please select or register an officer first, then double-click on the map to set their coordinates.");
+        return;
+      }
+      
+      const rect = canvas.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const clickY = e.clientY - rect.top;
+
+      const mapCoords = toMapCoords(clickX, clickY);
+      
+      // Update inputs & sliders
+      document.getElementById('slider-sim-lat').value = mapCoords.lat;
+      document.getElementById('lbl-sim-lat').innerText = mapCoords.lat;
+      document.getElementById('slider-sim-lng').value = mapCoords.lng;
+      document.getElementById('lbl-sim-lng').innerText = mapCoords.lng;
+
+      // Trigger location update on server
+      const res = await makeApiCall('/api/officers/location', 'POST', { lat: mapCoords.lat, lng: mapCoords.lng });
+      if (res.status === 200) {
+        await fetchAllData();
+        if (res.data.nextAssignment) {
+          alert(`Auto-Dispatch Triggered! Officer has been assigned to hotspot ${res.data.nextAssignment.hotspot.location} due to relocation!`);
+        }
+      }
+    });
+
+  </script>
+</body>
+</html>

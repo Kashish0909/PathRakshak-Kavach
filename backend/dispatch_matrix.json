@@ -1,0 +1,8986 @@
+[
+  {
+    "id": 1,
+    "day": "Monday",
+    "hour": 0,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 2,
+    "day": "Monday",
+    "hour": 0,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 3,
+    "day": "Monday",
+    "hour": 0,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 4,
+    "day": "Monday",
+    "hour": 0,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 5,
+    "day": "Monday",
+    "hour": 0,
+    "hotspot_id": 91,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 6,
+    "day": "Monday",
+    "hour": 0,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 7,
+    "day": "Monday",
+    "hour": 0,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 8,
+    "day": "Monday",
+    "hour": 1,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 9,
+    "day": "Monday",
+    "hour": 1,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 10,
+    "day": "Monday",
+    "hour": 1,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 11,
+    "day": "Monday",
+    "hour": 1,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 12,
+    "day": "Monday",
+    "hour": 1,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 13,
+    "day": "Monday",
+    "hour": 1,
+    "hotspot_id": 91,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 14,
+    "day": "Monday",
+    "hour": 1,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 15,
+    "day": "Monday",
+    "hour": 1,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 16,
+    "day": "Monday",
+    "hour": 2,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 17,
+    "day": "Monday",
+    "hour": 2,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 18,
+    "day": "Monday",
+    "hour": 2,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 19,
+    "day": "Monday",
+    "hour": 2,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 20,
+    "day": "Monday",
+    "hour": 3,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 21,
+    "day": "Monday",
+    "hour": 3,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 22,
+    "day": "Monday",
+    "hour": 3,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 23,
+    "day": "Monday",
+    "hour": 3,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 24,
+    "day": "Monday",
+    "hour": 4,
+    "hotspot_id": 464,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 25,
+    "day": "Monday",
+    "hour": 4,
+    "hotspot_id": 356,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 26,
+    "day": "Monday",
+    "hour": 4,
+    "hotspot_id": 405,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 27,
+    "day": "Monday",
+    "hour": 4,
+    "hotspot_id": 493,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 28,
+    "day": "Monday",
+    "hour": 4,
+    "hotspot_id": 569,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 29,
+    "day": "Monday",
+    "hour": 4,
+    "hotspot_id": 342,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 30,
+    "day": "Monday",
+    "hour": 4,
+    "hotspot_id": 577,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 31,
+    "day": "Monday",
+    "hour": 4,
+    "hotspot_id": 343,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 32,
+    "day": "Monday",
+    "hour": 4,
+    "hotspot_id": 138,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 33,
+    "day": "Monday",
+    "hour": 4,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 34,
+    "day": "Monday",
+    "hour": 5,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 35,
+    "day": "Monday",
+    "hour": 5,
+    "hotspot_id": 356,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 36,
+    "day": "Monday",
+    "hour": 5,
+    "hotspot_id": 464,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 37,
+    "day": "Monday",
+    "hour": 5,
+    "hotspot_id": 405,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 38,
+    "day": "Monday",
+    "hour": 5,
+    "hotspot_id": 569,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 39,
+    "day": "Monday",
+    "hour": 5,
+    "hotspot_id": 342,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 40,
+    "day": "Monday",
+    "hour": 5,
+    "hotspot_id": 493,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 41,
+    "day": "Monday",
+    "hour": 5,
+    "hotspot_id": 343,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 42,
+    "day": "Monday",
+    "hour": 5,
+    "hotspot_id": 577,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 43,
+    "day": "Monday",
+    "hour": 5,
+    "hotspot_id": 138,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 44,
+    "day": "Monday",
+    "hour": 6,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 45,
+    "day": "Monday",
+    "hour": 6,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 46,
+    "day": "Monday",
+    "hour": 6,
+    "hotspot_id": 292,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 47,
+    "day": "Monday",
+    "hour": 6,
+    "hotspot_id": 461,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 48,
+    "day": "Monday",
+    "hour": 6,
+    "hotspot_id": 491,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 49,
+    "day": "Monday",
+    "hour": 6,
+    "hotspot_id": 187,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 50,
+    "day": "Monday",
+    "hour": 6,
+    "hotspot_id": 272,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 51,
+    "day": "Monday",
+    "hour": 6,
+    "hotspot_id": 93,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 52,
+    "day": "Monday",
+    "hour": 6,
+    "hotspot_id": 405,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 53,
+    "day": "Monday",
+    "hour": 6,
+    "hotspot_id": 569,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 54,
+    "day": "Monday",
+    "hour": 7,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 55,
+    "day": "Monday",
+    "hour": 7,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 56,
+    "day": "Monday",
+    "hour": 7,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 57,
+    "day": "Monday",
+    "hour": 7,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 58,
+    "day": "Monday",
+    "hour": 7,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 59,
+    "day": "Monday",
+    "hour": 7,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 60,
+    "day": "Monday",
+    "hour": 7,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 61,
+    "day": "Monday",
+    "hour": 7,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 62,
+    "day": "Monday",
+    "hour": 7,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 63,
+    "day": "Monday",
+    "hour": 8,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 64,
+    "day": "Monday",
+    "hour": 8,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 65,
+    "day": "Monday",
+    "hour": 8,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 66,
+    "day": "Monday",
+    "hour": 8,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 67,
+    "day": "Monday",
+    "hour": 8,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 68,
+    "day": "Monday",
+    "hour": 8,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 69,
+    "day": "Monday",
+    "hour": 8,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 70,
+    "day": "Monday",
+    "hour": 8,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 71,
+    "day": "Monday",
+    "hour": 8,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 72,
+    "day": "Monday",
+    "hour": 8,
+    "hotspot_id": 71,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 73,
+    "day": "Monday",
+    "hour": 9,
+    "hotspot_id": 288,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 74,
+    "day": "Monday",
+    "hour": 9,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 75,
+    "day": "Monday",
+    "hour": 9,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 76,
+    "day": "Monday",
+    "hour": 9,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 77,
+    "day": "Monday",
+    "hour": 9,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 78,
+    "day": "Monday",
+    "hour": 9,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 79,
+    "day": "Monday",
+    "hour": 9,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 80,
+    "day": "Monday",
+    "hour": 9,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 81,
+    "day": "Monday",
+    "hour": 9,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 82,
+    "day": "Monday",
+    "hour": 9,
+    "hotspot_id": 71,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 83,
+    "day": "Monday",
+    "hour": 10,
+    "hotspot_id": 288,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 84,
+    "day": "Monday",
+    "hour": 10,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 85,
+    "day": "Monday",
+    "hour": 10,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 86,
+    "day": "Monday",
+    "hour": 10,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 87,
+    "day": "Monday",
+    "hour": 10,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 88,
+    "day": "Monday",
+    "hour": 10,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 89,
+    "day": "Monday",
+    "hour": 10,
+    "hotspot_id": 230,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 90,
+    "day": "Monday",
+    "hour": 10,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 91,
+    "day": "Monday",
+    "hour": 10,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 92,
+    "day": "Monday",
+    "hour": 10,
+    "hotspot_id": 71,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 93,
+    "day": "Monday",
+    "hour": 11,
+    "hotspot_id": 288,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 94,
+    "day": "Monday",
+    "hour": 11,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 95,
+    "day": "Monday",
+    "hour": 11,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 96,
+    "day": "Monday",
+    "hour": 11,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 97,
+    "day": "Monday",
+    "hour": 11,
+    "hotspot_id": 48,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 98,
+    "day": "Monday",
+    "hour": 11,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 99,
+    "day": "Monday",
+    "hour": 11,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 100,
+    "day": "Monday",
+    "hour": 11,
+    "hotspot_id": 230,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 101,
+    "day": "Monday",
+    "hour": 11,
+    "hotspot_id": 73,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 102,
+    "day": "Monday",
+    "hour": 11,
+    "hotspot_id": 71,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 103,
+    "day": "Monday",
+    "hour": 12,
+    "hotspot_id": 288,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 104,
+    "day": "Monday",
+    "hour": 12,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 105,
+    "day": "Monday",
+    "hour": 12,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 106,
+    "day": "Monday",
+    "hour": 12,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 107,
+    "day": "Monday",
+    "hour": 12,
+    "hotspot_id": 73,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 108,
+    "day": "Monday",
+    "hour": 12,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 109,
+    "day": "Monday",
+    "hour": 12,
+    "hotspot_id": 48,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 110,
+    "day": "Monday",
+    "hour": 12,
+    "hotspot_id": 523,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 111,
+    "day": "Monday",
+    "hour": 12,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 112,
+    "day": "Monday",
+    "hour": 12,
+    "hotspot_id": 230,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 113,
+    "day": "Monday",
+    "hour": 13,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 114,
+    "day": "Monday",
+    "hour": 13,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 115,
+    "day": "Monday",
+    "hour": 13,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 116,
+    "day": "Monday",
+    "hour": 13,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 117,
+    "day": "Monday",
+    "hour": 13,
+    "hotspot_id": 73,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 118,
+    "day": "Monday",
+    "hour": 13,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 119,
+    "day": "Monday",
+    "hour": 13,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 120,
+    "day": "Monday",
+    "hour": 13,
+    "hotspot_id": 48,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 121,
+    "day": "Monday",
+    "hour": 13,
+    "hotspot_id": 523,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 122,
+    "day": "Monday",
+    "hour": 13,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 123,
+    "day": "Monday",
+    "hour": 14,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 124,
+    "day": "Monday",
+    "hour": 14,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 125,
+    "day": "Monday",
+    "hour": 14,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 126,
+    "day": "Monday",
+    "hour": 14,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 127,
+    "day": "Monday",
+    "hour": 14,
+    "hotspot_id": 73,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 128,
+    "day": "Monday",
+    "hour": 14,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 129,
+    "day": "Monday",
+    "hour": 14,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 130,
+    "day": "Monday",
+    "hour": 14,
+    "hotspot_id": 48,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 131,
+    "day": "Monday",
+    "hour": 14,
+    "hotspot_id": 523,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 132,
+    "day": "Monday",
+    "hour": 14,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 133,
+    "day": "Monday",
+    "hour": 15,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 134,
+    "day": "Monday",
+    "hour": 15,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 135,
+    "day": "Monday",
+    "hour": 15,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 136,
+    "day": "Monday",
+    "hour": 15,
+    "hotspot_id": 73,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 137,
+    "day": "Monday",
+    "hour": 15,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 138,
+    "day": "Monday",
+    "hour": 15,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 139,
+    "day": "Monday",
+    "hour": 15,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 140,
+    "day": "Monday",
+    "hour": 15,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 141,
+    "day": "Monday",
+    "hour": 15,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 142,
+    "day": "Monday",
+    "hour": 15,
+    "hotspot_id": 523,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 143,
+    "day": "Monday",
+    "hour": 16,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 144,
+    "day": "Monday",
+    "hour": 16,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 145,
+    "day": "Monday",
+    "hour": 16,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 146,
+    "day": "Monday",
+    "hour": 16,
+    "hotspot_id": 73,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 147,
+    "day": "Monday",
+    "hour": 16,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 148,
+    "day": "Monday",
+    "hour": 16,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 149,
+    "day": "Monday",
+    "hour": 16,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 150,
+    "day": "Monday",
+    "hour": 16,
+    "hotspot_id": 48,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 151,
+    "day": "Monday",
+    "hour": 16,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 152,
+    "day": "Monday",
+    "hour": 16,
+    "hotspot_id": 523,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 153,
+    "day": "Monday",
+    "hour": 17,
+    "hotspot_id": 288,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 154,
+    "day": "Monday",
+    "hour": 17,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 155,
+    "day": "Monday",
+    "hour": 17,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 156,
+    "day": "Monday",
+    "hour": 17,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 157,
+    "day": "Monday",
+    "hour": 17,
+    "hotspot_id": 73,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 158,
+    "day": "Monday",
+    "hour": 17,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 159,
+    "day": "Monday",
+    "hour": 17,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 160,
+    "day": "Monday",
+    "hour": 17,
+    "hotspot_id": 48,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 161,
+    "day": "Monday",
+    "hour": 17,
+    "hotspot_id": 230,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 162,
+    "day": "Monday",
+    "hour": 17,
+    "hotspot_id": 71,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 163,
+    "day": "Monday",
+    "hour": 18,
+    "hotspot_id": 288,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 164,
+    "day": "Monday",
+    "hour": 18,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 165,
+    "day": "Monday",
+    "hour": 18,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 166,
+    "day": "Monday",
+    "hour": 18,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 167,
+    "day": "Monday",
+    "hour": 18,
+    "hotspot_id": 73,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 168,
+    "day": "Monday",
+    "hour": 18,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 169,
+    "day": "Monday",
+    "hour": 18,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 170,
+    "day": "Monday",
+    "hour": 18,
+    "hotspot_id": 48,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 171,
+    "day": "Monday",
+    "hour": 18,
+    "hotspot_id": 230,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 172,
+    "day": "Monday",
+    "hour": 18,
+    "hotspot_id": 71,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 173,
+    "day": "Monday",
+    "hour": 19,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 174,
+    "day": "Monday",
+    "hour": 19,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 175,
+    "day": "Monday",
+    "hour": 19,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 176,
+    "day": "Monday",
+    "hour": 19,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 177,
+    "day": "Monday",
+    "hour": 19,
+    "hotspot_id": 73,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 178,
+    "day": "Monday",
+    "hour": 19,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 179,
+    "day": "Monday",
+    "hour": 19,
+    "hotspot_id": 230,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 180,
+    "day": "Monday",
+    "hour": 19,
+    "hotspot_id": 48,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 181,
+    "day": "Monday",
+    "hour": 19,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 182,
+    "day": "Monday",
+    "hour": 19,
+    "hotspot_id": 71,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 183,
+    "day": "Monday",
+    "hour": 20,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 184,
+    "day": "Monday",
+    "hour": 20,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 185,
+    "day": "Monday",
+    "hour": 20,
+    "hotspot_id": 71,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 186,
+    "day": "Monday",
+    "hour": 20,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 187,
+    "day": "Monday",
+    "hour": 20,
+    "hotspot_id": 143,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 188,
+    "day": "Monday",
+    "hour": 20,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 189,
+    "day": "Monday",
+    "hour": 20,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 190,
+    "day": "Monday",
+    "hour": 20,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 191,
+    "day": "Monday",
+    "hour": 21,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 192,
+    "day": "Monday",
+    "hour": 21,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 193,
+    "day": "Monday",
+    "hour": 22,
+    "hotspot_id": 523,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 194,
+    "day": "Monday",
+    "hour": 22,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 195,
+    "day": "Monday",
+    "hour": 22,
+    "hotspot_id": 382,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 196,
+    "day": "Monday",
+    "hour": 22,
+    "hotspot_id": 224,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 197,
+    "day": "Monday",
+    "hour": 22,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 198,
+    "day": "Monday",
+    "hour": 23,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 199,
+    "day": "Monday",
+    "hour": 23,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 200,
+    "day": "Tuesday",
+    "hour": 0,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 201,
+    "day": "Tuesday",
+    "hour": 0,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 202,
+    "day": "Tuesday",
+    "hour": 0,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 203,
+    "day": "Tuesday",
+    "hour": 0,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 204,
+    "day": "Tuesday",
+    "hour": 0,
+    "hotspot_id": 408,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 205,
+    "day": "Tuesday",
+    "hour": 1,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 206,
+    "day": "Tuesday",
+    "hour": 1,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 207,
+    "day": "Tuesday",
+    "hour": 1,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 208,
+    "day": "Tuesday",
+    "hour": 1,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 209,
+    "day": "Tuesday",
+    "hour": 2,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 210,
+    "day": "Tuesday",
+    "hour": 2,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 211,
+    "day": "Tuesday",
+    "hour": 2,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 212,
+    "day": "Tuesday",
+    "hour": 3,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 213,
+    "day": "Tuesday",
+    "hour": 3,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 214,
+    "day": "Tuesday",
+    "hour": 3,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 215,
+    "day": "Tuesday",
+    "hour": 4,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 216,
+    "day": "Tuesday",
+    "hour": 4,
+    "hotspot_id": 464,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 217,
+    "day": "Tuesday",
+    "hour": 4,
+    "hotspot_id": 569,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 218,
+    "day": "Tuesday",
+    "hour": 4,
+    "hotspot_id": 356,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 219,
+    "day": "Tuesday",
+    "hour": 4,
+    "hotspot_id": 493,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 220,
+    "day": "Tuesday",
+    "hour": 4,
+    "hotspot_id": 342,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 221,
+    "day": "Tuesday",
+    "hour": 4,
+    "hotspot_id": 405,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 222,
+    "day": "Tuesday",
+    "hour": 4,
+    "hotspot_id": 577,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 223,
+    "day": "Tuesday",
+    "hour": 4,
+    "hotspot_id": 343,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 224,
+    "day": "Tuesday",
+    "hour": 4,
+    "hotspot_id": 138,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 225,
+    "day": "Tuesday",
+    "hour": 5,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 226,
+    "day": "Tuesday",
+    "hour": 5,
+    "hotspot_id": 356,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 227,
+    "day": "Tuesday",
+    "hour": 5,
+    "hotspot_id": 464,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 228,
+    "day": "Tuesday",
+    "hour": 5,
+    "hotspot_id": 405,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 229,
+    "day": "Tuesday",
+    "hour": 5,
+    "hotspot_id": 569,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 230,
+    "day": "Tuesday",
+    "hour": 5,
+    "hotspot_id": 493,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 231,
+    "day": "Tuesday",
+    "hour": 5,
+    "hotspot_id": 342,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 232,
+    "day": "Tuesday",
+    "hour": 5,
+    "hotspot_id": 577,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 233,
+    "day": "Tuesday",
+    "hour": 5,
+    "hotspot_id": 343,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 234,
+    "day": "Tuesday",
+    "hour": 5,
+    "hotspot_id": 138,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 235,
+    "day": "Tuesday",
+    "hour": 6,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 236,
+    "day": "Tuesday",
+    "hour": 6,
+    "hotspot_id": 292,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 237,
+    "day": "Tuesday",
+    "hour": 6,
+    "hotspot_id": 187,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 238,
+    "day": "Tuesday",
+    "hour": 6,
+    "hotspot_id": 491,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 239,
+    "day": "Tuesday",
+    "hour": 6,
+    "hotspot_id": 272,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 240,
+    "day": "Tuesday",
+    "hour": 6,
+    "hotspot_id": 461,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 241,
+    "day": "Tuesday",
+    "hour": 6,
+    "hotspot_id": 93,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 242,
+    "day": "Tuesday",
+    "hour": 6,
+    "hotspot_id": 569,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 243,
+    "day": "Tuesday",
+    "hour": 6,
+    "hotspot_id": 356,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 244,
+    "day": "Tuesday",
+    "hour": 6,
+    "hotspot_id": 405,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 245,
+    "day": "Tuesday",
+    "hour": 7,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 246,
+    "day": "Tuesday",
+    "hour": 7,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 247,
+    "day": "Tuesday",
+    "hour": 7,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 248,
+    "day": "Tuesday",
+    "hour": 7,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 249,
+    "day": "Tuesday",
+    "hour": 7,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 250,
+    "day": "Tuesday",
+    "hour": 7,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 251,
+    "day": "Tuesday",
+    "hour": 7,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 252,
+    "day": "Tuesday",
+    "hour": 8,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 253,
+    "day": "Tuesday",
+    "hour": 8,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 254,
+    "day": "Tuesday",
+    "hour": 8,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 255,
+    "day": "Tuesday",
+    "hour": 8,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 256,
+    "day": "Tuesday",
+    "hour": 8,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 257,
+    "day": "Tuesday",
+    "hour": 8,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 258,
+    "day": "Tuesday",
+    "hour": 8,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 259,
+    "day": "Tuesday",
+    "hour": 8,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 260,
+    "day": "Tuesday",
+    "hour": 9,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 261,
+    "day": "Tuesday",
+    "hour": 9,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 262,
+    "day": "Tuesday",
+    "hour": 9,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 263,
+    "day": "Tuesday",
+    "hour": 9,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 264,
+    "day": "Tuesday",
+    "hour": 9,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 265,
+    "day": "Tuesday",
+    "hour": 9,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 266,
+    "day": "Tuesday",
+    "hour": 9,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 267,
+    "day": "Tuesday",
+    "hour": 9,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 268,
+    "day": "Tuesday",
+    "hour": 9,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 269,
+    "day": "Tuesday",
+    "hour": 9,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 270,
+    "day": "Tuesday",
+    "hour": 10,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 271,
+    "day": "Tuesday",
+    "hour": 10,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 272,
+    "day": "Tuesday",
+    "hour": 10,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 273,
+    "day": "Tuesday",
+    "hour": 10,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 274,
+    "day": "Tuesday",
+    "hour": 10,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 275,
+    "day": "Tuesday",
+    "hour": 10,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 276,
+    "day": "Tuesday",
+    "hour": 10,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 277,
+    "day": "Tuesday",
+    "hour": 10,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 278,
+    "day": "Tuesday",
+    "hour": 10,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 279,
+    "day": "Tuesday",
+    "hour": 10,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 280,
+    "day": "Tuesday",
+    "hour": 11,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 281,
+    "day": "Tuesday",
+    "hour": 11,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 282,
+    "day": "Tuesday",
+    "hour": 11,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 283,
+    "day": "Tuesday",
+    "hour": 11,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 284,
+    "day": "Tuesday",
+    "hour": 11,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 285,
+    "day": "Tuesday",
+    "hour": 11,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 286,
+    "day": "Tuesday",
+    "hour": 11,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 287,
+    "day": "Tuesday",
+    "hour": 11,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 288,
+    "day": "Tuesday",
+    "hour": 11,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 289,
+    "day": "Tuesday",
+    "hour": 11,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 290,
+    "day": "Tuesday",
+    "hour": 12,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 291,
+    "day": "Tuesday",
+    "hour": 12,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 292,
+    "day": "Tuesday",
+    "hour": 12,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 293,
+    "day": "Tuesday",
+    "hour": 12,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 294,
+    "day": "Tuesday",
+    "hour": 12,
+    "hotspot_id": 523,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 295,
+    "day": "Tuesday",
+    "hour": 12,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 296,
+    "day": "Tuesday",
+    "hour": 12,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 297,
+    "day": "Tuesday",
+    "hour": 12,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 298,
+    "day": "Tuesday",
+    "hour": 12,
+    "hotspot_id": 382,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 299,
+    "day": "Tuesday",
+    "hour": 12,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 300,
+    "day": "Tuesday",
+    "hour": 13,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 301,
+    "day": "Tuesday",
+    "hour": 13,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 302,
+    "day": "Tuesday",
+    "hour": 13,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 303,
+    "day": "Tuesday",
+    "hour": 13,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 304,
+    "day": "Tuesday",
+    "hour": 13,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 305,
+    "day": "Tuesday",
+    "hour": 13,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 306,
+    "day": "Tuesday",
+    "hour": 14,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 307,
+    "day": "Tuesday",
+    "hour": 14,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 308,
+    "day": "Tuesday",
+    "hour": 14,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 309,
+    "day": "Tuesday",
+    "hour": 14,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 310,
+    "day": "Tuesday",
+    "hour": 14,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 311,
+    "day": "Tuesday",
+    "hour": 14,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 312,
+    "day": "Tuesday",
+    "hour": 15,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 313,
+    "day": "Tuesday",
+    "hour": 15,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 314,
+    "day": "Tuesday",
+    "hour": 15,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 315,
+    "day": "Tuesday",
+    "hour": 15,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 316,
+    "day": "Tuesday",
+    "hour": 15,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 317,
+    "day": "Tuesday",
+    "hour": 15,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 318,
+    "day": "Tuesday",
+    "hour": 16,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 319,
+    "day": "Tuesday",
+    "hour": 16,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 320,
+    "day": "Tuesday",
+    "hour": 16,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 321,
+    "day": "Tuesday",
+    "hour": 16,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 322,
+    "day": "Tuesday",
+    "hour": 16,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 323,
+    "day": "Tuesday",
+    "hour": 16,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 324,
+    "day": "Tuesday",
+    "hour": 16,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 325,
+    "day": "Tuesday",
+    "hour": 16,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 326,
+    "day": "Tuesday",
+    "hour": 16,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 327,
+    "day": "Tuesday",
+    "hour": 16,
+    "hotspot_id": 408,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 328,
+    "day": "Tuesday",
+    "hour": 17,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 329,
+    "day": "Tuesday",
+    "hour": 17,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 330,
+    "day": "Tuesday",
+    "hour": 17,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 331,
+    "day": "Tuesday",
+    "hour": 17,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 332,
+    "day": "Tuesday",
+    "hour": 17,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 333,
+    "day": "Tuesday",
+    "hour": 17,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 334,
+    "day": "Tuesday",
+    "hour": 17,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 335,
+    "day": "Tuesday",
+    "hour": 17,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 336,
+    "day": "Tuesday",
+    "hour": 17,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 337,
+    "day": "Tuesday",
+    "hour": 17,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 338,
+    "day": "Tuesday",
+    "hour": 18,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 339,
+    "day": "Tuesday",
+    "hour": 18,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 340,
+    "day": "Tuesday",
+    "hour": 18,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 341,
+    "day": "Tuesday",
+    "hour": 18,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 342,
+    "day": "Tuesday",
+    "hour": 18,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 343,
+    "day": "Tuesday",
+    "hour": 18,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 344,
+    "day": "Tuesday",
+    "hour": 18,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 345,
+    "day": "Tuesday",
+    "hour": 18,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 346,
+    "day": "Tuesday",
+    "hour": 18,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 347,
+    "day": "Tuesday",
+    "hour": 18,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 348,
+    "day": "Tuesday",
+    "hour": 19,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 349,
+    "day": "Tuesday",
+    "hour": 19,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 350,
+    "day": "Tuesday",
+    "hour": 19,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 351,
+    "day": "Tuesday",
+    "hour": 19,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 352,
+    "day": "Tuesday",
+    "hour": 19,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 353,
+    "day": "Tuesday",
+    "hour": 19,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 354,
+    "day": "Tuesday",
+    "hour": 19,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 355,
+    "day": "Tuesday",
+    "hour": 19,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 356,
+    "day": "Tuesday",
+    "hour": 19,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 357,
+    "day": "Tuesday",
+    "hour": 19,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 358,
+    "day": "Tuesday",
+    "hour": 20,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 359,
+    "day": "Tuesday",
+    "hour": 20,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 360,
+    "day": "Tuesday",
+    "hour": 20,
+    "hotspot_id": 393,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 361,
+    "day": "Tuesday",
+    "hour": 20,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 362,
+    "day": "Tuesday",
+    "hour": 20,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 363,
+    "day": "Tuesday",
+    "hour": 20,
+    "hotspot_id": 454,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 364,
+    "day": "Tuesday",
+    "hour": 20,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 365,
+    "day": "Tuesday",
+    "hour": 20,
+    "hotspot_id": 143,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 366,
+    "day": "Tuesday",
+    "hour": 20,
+    "hotspot_id": 408,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 367,
+    "day": "Tuesday",
+    "hour": 21,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 368,
+    "day": "Tuesday",
+    "hour": 21,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 369,
+    "day": "Tuesday",
+    "hour": 22,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 370,
+    "day": "Tuesday",
+    "hour": 22,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 371,
+    "day": "Tuesday",
+    "hour": 23,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 372,
+    "day": "Tuesday",
+    "hour": 23,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 373,
+    "day": "Tuesday",
+    "hour": 23,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 374,
+    "day": "Tuesday",
+    "hour": 23,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 375,
+    "day": "Wednesday",
+    "hour": 0,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 376,
+    "day": "Wednesday",
+    "hour": 0,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 377,
+    "day": "Wednesday",
+    "hour": 0,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 378,
+    "day": "Wednesday",
+    "hour": 1,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 379,
+    "day": "Wednesday",
+    "hour": 1,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 380,
+    "day": "Wednesday",
+    "hour": 1,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 381,
+    "day": "Wednesday",
+    "hour": 2,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 382,
+    "day": "Wednesday",
+    "hour": 2,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 383,
+    "day": "Wednesday",
+    "hour": 4,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 384,
+    "day": "Wednesday",
+    "hour": 4,
+    "hotspot_id": 464,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 385,
+    "day": "Wednesday",
+    "hour": 4,
+    "hotspot_id": 356,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 386,
+    "day": "Wednesday",
+    "hour": 4,
+    "hotspot_id": 405,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 387,
+    "day": "Wednesday",
+    "hour": 4,
+    "hotspot_id": 569,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 388,
+    "day": "Wednesday",
+    "hour": 4,
+    "hotspot_id": 577,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 389,
+    "day": "Wednesday",
+    "hour": 4,
+    "hotspot_id": 343,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 390,
+    "day": "Wednesday",
+    "hour": 4,
+    "hotspot_id": 342,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 391,
+    "day": "Wednesday",
+    "hour": 4,
+    "hotspot_id": 493,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 392,
+    "day": "Wednesday",
+    "hour": 4,
+    "hotspot_id": 138,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 393,
+    "day": "Wednesday",
+    "hour": 5,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 394,
+    "day": "Wednesday",
+    "hour": 5,
+    "hotspot_id": 464,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 395,
+    "day": "Wednesday",
+    "hour": 5,
+    "hotspot_id": 405,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 396,
+    "day": "Wednesday",
+    "hour": 5,
+    "hotspot_id": 356,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 397,
+    "day": "Wednesday",
+    "hour": 5,
+    "hotspot_id": 343,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 398,
+    "day": "Wednesday",
+    "hour": 5,
+    "hotspot_id": 493,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 399,
+    "day": "Wednesday",
+    "hour": 5,
+    "hotspot_id": 577,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 400,
+    "day": "Wednesday",
+    "hour": 5,
+    "hotspot_id": 569,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 401,
+    "day": "Wednesday",
+    "hour": 5,
+    "hotspot_id": 342,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 402,
+    "day": "Wednesday",
+    "hour": 5,
+    "hotspot_id": 138,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 403,
+    "day": "Wednesday",
+    "hour": 6,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 404,
+    "day": "Wednesday",
+    "hour": 6,
+    "hotspot_id": 292,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 405,
+    "day": "Wednesday",
+    "hour": 6,
+    "hotspot_id": 272,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 406,
+    "day": "Wednesday",
+    "hour": 6,
+    "hotspot_id": 187,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 407,
+    "day": "Wednesday",
+    "hour": 6,
+    "hotspot_id": 491,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 408,
+    "day": "Wednesday",
+    "hour": 6,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 409,
+    "day": "Wednesday",
+    "hour": 6,
+    "hotspot_id": 461,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 410,
+    "day": "Wednesday",
+    "hour": 6,
+    "hotspot_id": 93,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 411,
+    "day": "Wednesday",
+    "hour": 6,
+    "hotspot_id": 356,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 412,
+    "day": "Wednesday",
+    "hour": 6,
+    "hotspot_id": 464,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 413,
+    "day": "Wednesday",
+    "hour": 7,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 414,
+    "day": "Wednesday",
+    "hour": 7,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 415,
+    "day": "Wednesday",
+    "hour": 7,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 416,
+    "day": "Wednesday",
+    "hour": 7,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 417,
+    "day": "Wednesday",
+    "hour": 7,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 418,
+    "day": "Wednesday",
+    "hour": 7,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 419,
+    "day": "Wednesday",
+    "hour": 7,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 420,
+    "day": "Wednesday",
+    "hour": 8,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 421,
+    "day": "Wednesday",
+    "hour": 8,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 422,
+    "day": "Wednesday",
+    "hour": 8,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 423,
+    "day": "Wednesday",
+    "hour": 8,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 424,
+    "day": "Wednesday",
+    "hour": 8,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 425,
+    "day": "Wednesday",
+    "hour": 8,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 426,
+    "day": "Wednesday",
+    "hour": 8,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 427,
+    "day": "Wednesday",
+    "hour": 9,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 428,
+    "day": "Wednesday",
+    "hour": 9,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 429,
+    "day": "Wednesday",
+    "hour": 9,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 430,
+    "day": "Wednesday",
+    "hour": 9,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 431,
+    "day": "Wednesday",
+    "hour": 9,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 432,
+    "day": "Wednesday",
+    "hour": 9,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 433,
+    "day": "Wednesday",
+    "hour": 9,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 434,
+    "day": "Wednesday",
+    "hour": 9,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 435,
+    "day": "Wednesday",
+    "hour": 9,
+    "hotspot_id": 65,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 436,
+    "day": "Wednesday",
+    "hour": 9,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 437,
+    "day": "Wednesday",
+    "hour": 10,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 438,
+    "day": "Wednesday",
+    "hour": 10,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 439,
+    "day": "Wednesday",
+    "hour": 10,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 440,
+    "day": "Wednesday",
+    "hour": 10,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 441,
+    "day": "Wednesday",
+    "hour": 10,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 442,
+    "day": "Wednesday",
+    "hour": 10,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 443,
+    "day": "Wednesday",
+    "hour": 10,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 444,
+    "day": "Wednesday",
+    "hour": 10,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 445,
+    "day": "Wednesday",
+    "hour": 10,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 446,
+    "day": "Wednesday",
+    "hour": 10,
+    "hotspot_id": 65,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 447,
+    "day": "Wednesday",
+    "hour": 11,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 448,
+    "day": "Wednesday",
+    "hour": 11,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 449,
+    "day": "Wednesday",
+    "hour": 11,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 450,
+    "day": "Wednesday",
+    "hour": 11,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 451,
+    "day": "Wednesday",
+    "hour": 11,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 452,
+    "day": "Wednesday",
+    "hour": 11,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 453,
+    "day": "Wednesday",
+    "hour": 11,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 454,
+    "day": "Wednesday",
+    "hour": 11,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 455,
+    "day": "Wednesday",
+    "hour": 11,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 456,
+    "day": "Wednesday",
+    "hour": 11,
+    "hotspot_id": 65,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 457,
+    "day": "Wednesday",
+    "hour": 12,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 458,
+    "day": "Wednesday",
+    "hour": 12,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 459,
+    "day": "Wednesday",
+    "hour": 12,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 460,
+    "day": "Wednesday",
+    "hour": 12,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 461,
+    "day": "Wednesday",
+    "hour": 12,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 462,
+    "day": "Wednesday",
+    "hour": 12,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 463,
+    "day": "Wednesday",
+    "hour": 12,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 464,
+    "day": "Wednesday",
+    "hour": 12,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 465,
+    "day": "Wednesday",
+    "hour": 12,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 466,
+    "day": "Wednesday",
+    "hour": 12,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 467,
+    "day": "Wednesday",
+    "hour": 13,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 468,
+    "day": "Wednesday",
+    "hour": 13,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 469,
+    "day": "Wednesday",
+    "hour": 13,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 470,
+    "day": "Wednesday",
+    "hour": 13,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 471,
+    "day": "Wednesday",
+    "hour": 14,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 472,
+    "day": "Wednesday",
+    "hour": 14,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 473,
+    "day": "Wednesday",
+    "hour": 14,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 474,
+    "day": "Wednesday",
+    "hour": 14,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 475,
+    "day": "Wednesday",
+    "hour": 15,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 476,
+    "day": "Wednesday",
+    "hour": 15,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 477,
+    "day": "Wednesday",
+    "hour": 15,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 478,
+    "day": "Wednesday",
+    "hour": 15,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 479,
+    "day": "Wednesday",
+    "hour": 16,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 480,
+    "day": "Wednesday",
+    "hour": 16,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 481,
+    "day": "Wednesday",
+    "hour": 16,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 482,
+    "day": "Wednesday",
+    "hour": 16,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 483,
+    "day": "Wednesday",
+    "hour": 16,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 484,
+    "day": "Wednesday",
+    "hour": 17,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 485,
+    "day": "Wednesday",
+    "hour": 17,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 486,
+    "day": "Wednesday",
+    "hour": 17,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 487,
+    "day": "Wednesday",
+    "hour": 17,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 488,
+    "day": "Wednesday",
+    "hour": 17,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 489,
+    "day": "Wednesday",
+    "hour": 18,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 490,
+    "day": "Wednesday",
+    "hour": 18,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 491,
+    "day": "Wednesday",
+    "hour": 18,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 492,
+    "day": "Wednesday",
+    "hour": 18,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 493,
+    "day": "Wednesday",
+    "hour": 18,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 494,
+    "day": "Wednesday",
+    "hour": 18,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 495,
+    "day": "Wednesday",
+    "hour": 18,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 496,
+    "day": "Wednesday",
+    "hour": 19,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 497,
+    "day": "Wednesday",
+    "hour": 19,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 498,
+    "day": "Wednesday",
+    "hour": 20,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 499,
+    "day": "Wednesday",
+    "hour": 20,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 500,
+    "day": "Wednesday",
+    "hour": 23,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 501,
+    "day": "Thursday",
+    "hour": 2,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 502,
+    "day": "Thursday",
+    "hour": 2,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 503,
+    "day": "Thursday",
+    "hour": 2,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 504,
+    "day": "Thursday",
+    "hour": 3,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 505,
+    "day": "Thursday",
+    "hour": 4,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 506,
+    "day": "Thursday",
+    "hour": 4,
+    "hotspot_id": 464,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 507,
+    "day": "Thursday",
+    "hour": 4,
+    "hotspot_id": 405,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 508,
+    "day": "Thursday",
+    "hour": 4,
+    "hotspot_id": 356,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 509,
+    "day": "Thursday",
+    "hour": 4,
+    "hotspot_id": 493,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 510,
+    "day": "Thursday",
+    "hour": 4,
+    "hotspot_id": 569,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 511,
+    "day": "Thursday",
+    "hour": 4,
+    "hotspot_id": 342,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 512,
+    "day": "Thursday",
+    "hour": 4,
+    "hotspot_id": 343,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 513,
+    "day": "Thursday",
+    "hour": 4,
+    "hotspot_id": 577,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 514,
+    "day": "Thursday",
+    "hour": 4,
+    "hotspot_id": 138,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 515,
+    "day": "Thursday",
+    "hour": 5,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 516,
+    "day": "Thursday",
+    "hour": 5,
+    "hotspot_id": 405,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 517,
+    "day": "Thursday",
+    "hour": 5,
+    "hotspot_id": 569,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 518,
+    "day": "Thursday",
+    "hour": 5,
+    "hotspot_id": 464,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 519,
+    "day": "Thursday",
+    "hour": 5,
+    "hotspot_id": 356,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 520,
+    "day": "Thursday",
+    "hour": 5,
+    "hotspot_id": 342,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 521,
+    "day": "Thursday",
+    "hour": 5,
+    "hotspot_id": 577,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 522,
+    "day": "Thursday",
+    "hour": 5,
+    "hotspot_id": 343,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 523,
+    "day": "Thursday",
+    "hour": 5,
+    "hotspot_id": 493,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 524,
+    "day": "Thursday",
+    "hour": 5,
+    "hotspot_id": 138,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 525,
+    "day": "Thursday",
+    "hour": 6,
+    "hotspot_id": 292,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 526,
+    "day": "Thursday",
+    "hour": 6,
+    "hotspot_id": 187,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 527,
+    "day": "Thursday",
+    "hour": 6,
+    "hotspot_id": 491,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 528,
+    "day": "Thursday",
+    "hour": 6,
+    "hotspot_id": 272,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 529,
+    "day": "Thursday",
+    "hour": 6,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 530,
+    "day": "Thursday",
+    "hour": 6,
+    "hotspot_id": 461,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 531,
+    "day": "Thursday",
+    "hour": 6,
+    "hotspot_id": 405,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 532,
+    "day": "Thursday",
+    "hour": 6,
+    "hotspot_id": 356,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 533,
+    "day": "Thursday",
+    "hour": 6,
+    "hotspot_id": 569,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 534,
+    "day": "Thursday",
+    "hour": 6,
+    "hotspot_id": 464,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 535,
+    "day": "Thursday",
+    "hour": 7,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 536,
+    "day": "Thursday",
+    "hour": 7,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 537,
+    "day": "Thursday",
+    "hour": 8,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 538,
+    "day": "Thursday",
+    "hour": 8,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 539,
+    "day": "Thursday",
+    "hour": 8,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 540,
+    "day": "Thursday",
+    "hour": 8,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 541,
+    "day": "Thursday",
+    "hour": 8,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 542,
+    "day": "Thursday",
+    "hour": 8,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 543,
+    "day": "Thursday",
+    "hour": 8,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 544,
+    "day": "Thursday",
+    "hour": 9,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 545,
+    "day": "Thursday",
+    "hour": 9,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 546,
+    "day": "Thursday",
+    "hour": 9,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 547,
+    "day": "Thursday",
+    "hour": 9,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 548,
+    "day": "Thursday",
+    "hour": 9,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 549,
+    "day": "Thursday",
+    "hour": 9,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 550,
+    "day": "Thursday",
+    "hour": 9,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 551,
+    "day": "Thursday",
+    "hour": 9,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 552,
+    "day": "Thursday",
+    "hour": 9,
+    "hotspot_id": 454,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 553,
+    "day": "Thursday",
+    "hour": 9,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 554,
+    "day": "Thursday",
+    "hour": 10,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 555,
+    "day": "Thursday",
+    "hour": 10,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 556,
+    "day": "Thursday",
+    "hour": 10,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 557,
+    "day": "Thursday",
+    "hour": 10,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 558,
+    "day": "Thursday",
+    "hour": 10,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 559,
+    "day": "Thursday",
+    "hour": 10,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 560,
+    "day": "Thursday",
+    "hour": 10,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 561,
+    "day": "Thursday",
+    "hour": 10,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 562,
+    "day": "Thursday",
+    "hour": 10,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 563,
+    "day": "Thursday",
+    "hour": 10,
+    "hotspot_id": 454,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 564,
+    "day": "Thursday",
+    "hour": 11,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 565,
+    "day": "Thursday",
+    "hour": 11,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 566,
+    "day": "Thursday",
+    "hour": 11,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 567,
+    "day": "Thursday",
+    "hour": 11,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 568,
+    "day": "Thursday",
+    "hour": 11,
+    "hotspot_id": 48,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 569,
+    "day": "Thursday",
+    "hour": 11,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 570,
+    "day": "Thursday",
+    "hour": 11,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 571,
+    "day": "Thursday",
+    "hour": 11,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 572,
+    "day": "Thursday",
+    "hour": 11,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 573,
+    "day": "Thursday",
+    "hour": 11,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 574,
+    "day": "Thursday",
+    "hour": 12,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 575,
+    "day": "Thursday",
+    "hour": 12,
+    "hotspot_id": 523,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 576,
+    "day": "Thursday",
+    "hour": 12,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 577,
+    "day": "Thursday",
+    "hour": 12,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 578,
+    "day": "Thursday",
+    "hour": 12,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 579,
+    "day": "Thursday",
+    "hour": 12,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 580,
+    "day": "Thursday",
+    "hour": 12,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 581,
+    "day": "Thursday",
+    "hour": 12,
+    "hotspot_id": 224,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 582,
+    "day": "Thursday",
+    "hour": 12,
+    "hotspot_id": 382,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 583,
+    "day": "Thursday",
+    "hour": 12,
+    "hotspot_id": 454,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 584,
+    "day": "Thursday",
+    "hour": 13,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 585,
+    "day": "Thursday",
+    "hour": 13,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 586,
+    "day": "Thursday",
+    "hour": 14,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 587,
+    "day": "Thursday",
+    "hour": 14,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 588,
+    "day": "Thursday",
+    "hour": 15,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 589,
+    "day": "Thursday",
+    "hour": 15,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 590,
+    "day": "Thursday",
+    "hour": 16,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 591,
+    "day": "Thursday",
+    "hour": 16,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 592,
+    "day": "Thursday",
+    "hour": 16,
+    "hotspot_id": 523,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 593,
+    "day": "Thursday",
+    "hour": 16,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 594,
+    "day": "Thursday",
+    "hour": 16,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 595,
+    "day": "Thursday",
+    "hour": 16,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 596,
+    "day": "Thursday",
+    "hour": 16,
+    "hotspot_id": 382,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 597,
+    "day": "Thursday",
+    "hour": 16,
+    "hotspot_id": 224,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 598,
+    "day": "Thursday",
+    "hour": 17,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 599,
+    "day": "Thursday",
+    "hour": 17,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 600,
+    "day": "Thursday",
+    "hour": 17,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 601,
+    "day": "Thursday",
+    "hour": 17,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 602,
+    "day": "Thursday",
+    "hour": 17,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 603,
+    "day": "Thursday",
+    "hour": 17,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 604,
+    "day": "Thursday",
+    "hour": 17,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 605,
+    "day": "Thursday",
+    "hour": 17,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 606,
+    "day": "Thursday",
+    "hour": 17,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 607,
+    "day": "Thursday",
+    "hour": 17,
+    "hotspot_id": 454,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 608,
+    "day": "Thursday",
+    "hour": 18,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 609,
+    "day": "Thursday",
+    "hour": 18,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 610,
+    "day": "Thursday",
+    "hour": 18,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 611,
+    "day": "Thursday",
+    "hour": 18,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 612,
+    "day": "Thursday",
+    "hour": 18,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 613,
+    "day": "Thursday",
+    "hour": 18,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 614,
+    "day": "Thursday",
+    "hour": 18,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 615,
+    "day": "Thursday",
+    "hour": 18,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 616,
+    "day": "Thursday",
+    "hour": 18,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 617,
+    "day": "Thursday",
+    "hour": 18,
+    "hotspot_id": 454,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 618,
+    "day": "Thursday",
+    "hour": 19,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 619,
+    "day": "Thursday",
+    "hour": 19,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 620,
+    "day": "Thursday",
+    "hour": 19,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 621,
+    "day": "Thursday",
+    "hour": 19,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 622,
+    "day": "Thursday",
+    "hour": 19,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 623,
+    "day": "Thursday",
+    "hour": 19,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 624,
+    "day": "Thursday",
+    "hour": 19,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 625,
+    "day": "Thursday",
+    "hour": 19,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 626,
+    "day": "Thursday",
+    "hour": 19,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 627,
+    "day": "Thursday",
+    "hour": 19,
+    "hotspot_id": 454,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 628,
+    "day": "Thursday",
+    "hour": 20,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 629,
+    "day": "Thursday",
+    "hour": 20,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 630,
+    "day": "Thursday",
+    "hour": 20,
+    "hotspot_id": 393,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 631,
+    "day": "Thursday",
+    "hour": 20,
+    "hotspot_id": 454,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 632,
+    "day": "Thursday",
+    "hour": 20,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 633,
+    "day": "Thursday",
+    "hour": 20,
+    "hotspot_id": 579,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 634,
+    "day": "Thursday",
+    "hour": 21,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 635,
+    "day": "Thursday",
+    "hour": 21,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 636,
+    "day": "Thursday",
+    "hour": 23,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 637,
+    "day": "Thursday",
+    "hour": 23,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 638,
+    "day": "Friday",
+    "hour": 0,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 639,
+    "day": "Friday",
+    "hour": 0,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 640,
+    "day": "Friday",
+    "hour": 0,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 641,
+    "day": "Friday",
+    "hour": 0,
+    "hotspot_id": 96,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 642,
+    "day": "Friday",
+    "hour": 1,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 643,
+    "day": "Friday",
+    "hour": 1,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 644,
+    "day": "Friday",
+    "hour": 1,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 645,
+    "day": "Friday",
+    "hour": 2,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 646,
+    "day": "Friday",
+    "hour": 2,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 647,
+    "day": "Friday",
+    "hour": 4,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 648,
+    "day": "Friday",
+    "hour": 4,
+    "hotspot_id": 356,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 649,
+    "day": "Friday",
+    "hour": 4,
+    "hotspot_id": 405,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 650,
+    "day": "Friday",
+    "hour": 4,
+    "hotspot_id": 569,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 651,
+    "day": "Friday",
+    "hour": 4,
+    "hotspot_id": 493,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 652,
+    "day": "Friday",
+    "hour": 4,
+    "hotspot_id": 464,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 653,
+    "day": "Friday",
+    "hour": 4,
+    "hotspot_id": 342,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 654,
+    "day": "Friday",
+    "hour": 4,
+    "hotspot_id": 343,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 655,
+    "day": "Friday",
+    "hour": 4,
+    "hotspot_id": 577,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 656,
+    "day": "Friday",
+    "hour": 4,
+    "hotspot_id": 138,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 657,
+    "day": "Friday",
+    "hour": 5,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 658,
+    "day": "Friday",
+    "hour": 5,
+    "hotspot_id": 288,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 659,
+    "day": "Friday",
+    "hour": 5,
+    "hotspot_id": 342,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 660,
+    "day": "Friday",
+    "hour": 5,
+    "hotspot_id": 464,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 661,
+    "day": "Friday",
+    "hour": 5,
+    "hotspot_id": 569,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 662,
+    "day": "Friday",
+    "hour": 5,
+    "hotspot_id": 405,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 663,
+    "day": "Friday",
+    "hour": 5,
+    "hotspot_id": 356,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 664,
+    "day": "Friday",
+    "hour": 5,
+    "hotspot_id": 493,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 665,
+    "day": "Friday",
+    "hour": 5,
+    "hotspot_id": 343,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 666,
+    "day": "Friday",
+    "hour": 5,
+    "hotspot_id": 577,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 667,
+    "day": "Friday",
+    "hour": 6,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 668,
+    "day": "Friday",
+    "hour": 6,
+    "hotspot_id": 288,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 669,
+    "day": "Friday",
+    "hour": 6,
+    "hotspot_id": 93,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 670,
+    "day": "Friday",
+    "hour": 6,
+    "hotspot_id": 292,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 671,
+    "day": "Friday",
+    "hour": 6,
+    "hotspot_id": 187,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 672,
+    "day": "Friday",
+    "hour": 6,
+    "hotspot_id": 461,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 673,
+    "day": "Friday",
+    "hour": 6,
+    "hotspot_id": 491,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 674,
+    "day": "Friday",
+    "hour": 6,
+    "hotspot_id": 272,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 675,
+    "day": "Friday",
+    "hour": 6,
+    "hotspot_id": 356,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 676,
+    "day": "Friday",
+    "hour": 6,
+    "hotspot_id": 569,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 677,
+    "day": "Friday",
+    "hour": 7,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 678,
+    "day": "Friday",
+    "hour": 7,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 679,
+    "day": "Friday",
+    "hour": 7,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 680,
+    "day": "Friday",
+    "hour": 7,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 681,
+    "day": "Friday",
+    "hour": 7,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 682,
+    "day": "Friday",
+    "hour": 7,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 683,
+    "day": "Friday",
+    "hour": 7,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 684,
+    "day": "Friday",
+    "hour": 7,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 685,
+    "day": "Friday",
+    "hour": 8,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 686,
+    "day": "Friday",
+    "hour": 8,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 687,
+    "day": "Friday",
+    "hour": 8,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 688,
+    "day": "Friday",
+    "hour": 8,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 689,
+    "day": "Friday",
+    "hour": 8,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 690,
+    "day": "Friday",
+    "hour": 8,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 691,
+    "day": "Friday",
+    "hour": 8,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 692,
+    "day": "Friday",
+    "hour": 8,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 693,
+    "day": "Friday",
+    "hour": 9,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 694,
+    "day": "Friday",
+    "hour": 9,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 695,
+    "day": "Friday",
+    "hour": 9,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 696,
+    "day": "Friday",
+    "hour": 9,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 697,
+    "day": "Friday",
+    "hour": 9,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 698,
+    "day": "Friday",
+    "hour": 9,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 699,
+    "day": "Friday",
+    "hour": 9,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 700,
+    "day": "Friday",
+    "hour": 9,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 701,
+    "day": "Friday",
+    "hour": 9,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 702,
+    "day": "Friday",
+    "hour": 9,
+    "hotspot_id": 143,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 703,
+    "day": "Friday",
+    "hour": 10,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 704,
+    "day": "Friday",
+    "hour": 10,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 705,
+    "day": "Friday",
+    "hour": 10,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 706,
+    "day": "Friday",
+    "hour": 10,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 707,
+    "day": "Friday",
+    "hour": 10,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 708,
+    "day": "Friday",
+    "hour": 10,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 709,
+    "day": "Friday",
+    "hour": 10,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 710,
+    "day": "Friday",
+    "hour": 10,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 711,
+    "day": "Friday",
+    "hour": 10,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 712,
+    "day": "Friday",
+    "hour": 10,
+    "hotspot_id": 143,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 713,
+    "day": "Friday",
+    "hour": 11,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 714,
+    "day": "Friday",
+    "hour": 11,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 715,
+    "day": "Friday",
+    "hour": 11,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 716,
+    "day": "Friday",
+    "hour": 11,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 717,
+    "day": "Friday",
+    "hour": 11,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 718,
+    "day": "Friday",
+    "hour": 11,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 719,
+    "day": "Friday",
+    "hour": 11,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 720,
+    "day": "Friday",
+    "hour": 11,
+    "hotspot_id": 143,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 721,
+    "day": "Friday",
+    "hour": 11,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 722,
+    "day": "Friday",
+    "hour": 11,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 723,
+    "day": "Friday",
+    "hour": 12,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 724,
+    "day": "Friday",
+    "hour": 12,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 725,
+    "day": "Friday",
+    "hour": 12,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 726,
+    "day": "Friday",
+    "hour": 12,
+    "hotspot_id": 320,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 727,
+    "day": "Friday",
+    "hour": 12,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 728,
+    "day": "Friday",
+    "hour": 12,
+    "hotspot_id": 48,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 729,
+    "day": "Friday",
+    "hour": 12,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 730,
+    "day": "Friday",
+    "hour": 12,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 731,
+    "day": "Friday",
+    "hour": 12,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 732,
+    "day": "Friday",
+    "hour": 12,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 733,
+    "day": "Friday",
+    "hour": 13,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 734,
+    "day": "Friday",
+    "hour": 13,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 735,
+    "day": "Friday",
+    "hour": 13,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 736,
+    "day": "Friday",
+    "hour": 13,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 737,
+    "day": "Friday",
+    "hour": 13,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 738,
+    "day": "Friday",
+    "hour": 14,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 739,
+    "day": "Friday",
+    "hour": 14,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 740,
+    "day": "Friday",
+    "hour": 14,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 741,
+    "day": "Friday",
+    "hour": 14,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 742,
+    "day": "Friday",
+    "hour": 14,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 743,
+    "day": "Friday",
+    "hour": 15,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 744,
+    "day": "Friday",
+    "hour": 15,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 745,
+    "day": "Friday",
+    "hour": 15,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 746,
+    "day": "Friday",
+    "hour": 15,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 747,
+    "day": "Friday",
+    "hour": 15,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 748,
+    "day": "Friday",
+    "hour": 16,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 749,
+    "day": "Friday",
+    "hour": 16,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 750,
+    "day": "Friday",
+    "hour": 16,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 751,
+    "day": "Friday",
+    "hour": 16,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 752,
+    "day": "Friday",
+    "hour": 16,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 753,
+    "day": "Friday",
+    "hour": 16,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 754,
+    "day": "Friday",
+    "hour": 16,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 755,
+    "day": "Friday",
+    "hour": 16,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 756,
+    "day": "Friday",
+    "hour": 17,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 757,
+    "day": "Friday",
+    "hour": 17,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 758,
+    "day": "Friday",
+    "hour": 17,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 759,
+    "day": "Friday",
+    "hour": 17,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 760,
+    "day": "Friday",
+    "hour": 17,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 761,
+    "day": "Friday",
+    "hour": 18,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 762,
+    "day": "Friday",
+    "hour": 18,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 763,
+    "day": "Friday",
+    "hour": 18,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 764,
+    "day": "Friday",
+    "hour": 18,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 765,
+    "day": "Friday",
+    "hour": 18,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 766,
+    "day": "Friday",
+    "hour": 18,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 767,
+    "day": "Friday",
+    "hour": 18,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 768,
+    "day": "Friday",
+    "hour": 19,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 769,
+    "day": "Friday",
+    "hour": 19,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 770,
+    "day": "Friday",
+    "hour": 19,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 771,
+    "day": "Friday",
+    "hour": 19,
+    "hotspot_id": 143,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 772,
+    "day": "Friday",
+    "hour": 19,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 773,
+    "day": "Friday",
+    "hour": 19,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 774,
+    "day": "Friday",
+    "hour": 19,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 775,
+    "day": "Friday",
+    "hour": 19,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 776,
+    "day": "Friday",
+    "hour": 19,
+    "hotspot_id": 393,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 777,
+    "day": "Friday",
+    "hour": 19,
+    "hotspot_id": 408,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 778,
+    "day": "Friday",
+    "hour": 20,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 779,
+    "day": "Friday",
+    "hour": 20,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 780,
+    "day": "Saturday",
+    "hour": 0,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 781,
+    "day": "Saturday",
+    "hour": 0,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 782,
+    "day": "Saturday",
+    "hour": 0,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 783,
+    "day": "Saturday",
+    "hour": 0,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 784,
+    "day": "Saturday",
+    "hour": 0,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 785,
+    "day": "Saturday",
+    "hour": 1,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 786,
+    "day": "Saturday",
+    "hour": 1,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 787,
+    "day": "Saturday",
+    "hour": 1,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 788,
+    "day": "Saturday",
+    "hour": 1,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 789,
+    "day": "Saturday",
+    "hour": 1,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 790,
+    "day": "Saturday",
+    "hour": 1,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 791,
+    "day": "Saturday",
+    "hour": 2,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 792,
+    "day": "Saturday",
+    "hour": 3,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 793,
+    "day": "Saturday",
+    "hour": 3,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 794,
+    "day": "Saturday",
+    "hour": 4,
+    "hotspot_id": 464,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 795,
+    "day": "Saturday",
+    "hour": 4,
+    "hotspot_id": 405,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 796,
+    "day": "Saturday",
+    "hour": 4,
+    "hotspot_id": 356,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 797,
+    "day": "Saturday",
+    "hour": 4,
+    "hotspot_id": 577,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 798,
+    "day": "Saturday",
+    "hour": 4,
+    "hotspot_id": 342,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 799,
+    "day": "Saturday",
+    "hour": 4,
+    "hotspot_id": 493,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 800,
+    "day": "Saturday",
+    "hour": 4,
+    "hotspot_id": 569,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 801,
+    "day": "Saturday",
+    "hour": 4,
+    "hotspot_id": 343,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 802,
+    "day": "Saturday",
+    "hour": 4,
+    "hotspot_id": 138,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 803,
+    "day": "Saturday",
+    "hour": 4,
+    "hotspot_id": 320,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 804,
+    "day": "Saturday",
+    "hour": 5,
+    "hotspot_id": 356,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 805,
+    "day": "Saturday",
+    "hour": 5,
+    "hotspot_id": 405,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 806,
+    "day": "Saturday",
+    "hour": 5,
+    "hotspot_id": 464,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 807,
+    "day": "Saturday",
+    "hour": 5,
+    "hotspot_id": 569,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 808,
+    "day": "Saturday",
+    "hour": 5,
+    "hotspot_id": 493,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 809,
+    "day": "Saturday",
+    "hour": 5,
+    "hotspot_id": 577,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 810,
+    "day": "Saturday",
+    "hour": 5,
+    "hotspot_id": 343,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 811,
+    "day": "Saturday",
+    "hour": 5,
+    "hotspot_id": 342,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 812,
+    "day": "Saturday",
+    "hour": 5,
+    "hotspot_id": 138,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 813,
+    "day": "Saturday",
+    "hour": 5,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 814,
+    "day": "Saturday",
+    "hour": 6,
+    "hotspot_id": 320,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 815,
+    "day": "Saturday",
+    "hour": 6,
+    "hotspot_id": 493,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 816,
+    "day": "Saturday",
+    "hour": 6,
+    "hotspot_id": 356,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 817,
+    "day": "Saturday",
+    "hour": 6,
+    "hotspot_id": 464,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 818,
+    "day": "Saturday",
+    "hour": 6,
+    "hotspot_id": 405,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 819,
+    "day": "Saturday",
+    "hour": 6,
+    "hotspot_id": 343,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 820,
+    "day": "Saturday",
+    "hour": 6,
+    "hotspot_id": 342,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 821,
+    "day": "Saturday",
+    "hour": 6,
+    "hotspot_id": 577,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 822,
+    "day": "Saturday",
+    "hour": 6,
+    "hotspot_id": 569,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 823,
+    "day": "Saturday",
+    "hour": 6,
+    "hotspot_id": 138,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 824,
+    "day": "Saturday",
+    "hour": 7,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 825,
+    "day": "Saturday",
+    "hour": 7,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 826,
+    "day": "Saturday",
+    "hour": 7,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 827,
+    "day": "Saturday",
+    "hour": 7,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 828,
+    "day": "Saturday",
+    "hour": 7,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 829,
+    "day": "Saturday",
+    "hour": 7,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 830,
+    "day": "Saturday",
+    "hour": 7,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 831,
+    "day": "Saturday",
+    "hour": 8,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 832,
+    "day": "Saturday",
+    "hour": 8,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 833,
+    "day": "Saturday",
+    "hour": 8,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 834,
+    "day": "Saturday",
+    "hour": 8,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 835,
+    "day": "Saturday",
+    "hour": 8,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 836,
+    "day": "Saturday",
+    "hour": 8,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 837,
+    "day": "Saturday",
+    "hour": 8,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 838,
+    "day": "Saturday",
+    "hour": 9,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 839,
+    "day": "Saturday",
+    "hour": 9,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 840,
+    "day": "Saturday",
+    "hour": 9,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 841,
+    "day": "Saturday",
+    "hour": 9,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 842,
+    "day": "Saturday",
+    "hour": 9,
+    "hotspot_id": 149,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 843,
+    "day": "Saturday",
+    "hour": 9,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 844,
+    "day": "Saturday",
+    "hour": 9,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 845,
+    "day": "Saturday",
+    "hour": 9,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 846,
+    "day": "Saturday",
+    "hour": 9,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 847,
+    "day": "Saturday",
+    "hour": 9,
+    "hotspot_id": 143,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 848,
+    "day": "Saturday",
+    "hour": 10,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 849,
+    "day": "Saturday",
+    "hour": 10,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 850,
+    "day": "Saturday",
+    "hour": 10,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 851,
+    "day": "Saturday",
+    "hour": 10,
+    "hotspot_id": 149,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 852,
+    "day": "Saturday",
+    "hour": 10,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 853,
+    "day": "Saturday",
+    "hour": 10,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 854,
+    "day": "Saturday",
+    "hour": 10,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 855,
+    "day": "Saturday",
+    "hour": 10,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 856,
+    "day": "Saturday",
+    "hour": 10,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 857,
+    "day": "Saturday",
+    "hour": 10,
+    "hotspot_id": 143,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 858,
+    "day": "Saturday",
+    "hour": 11,
+    "hotspot_id": 288,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 859,
+    "day": "Saturday",
+    "hour": 11,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 860,
+    "day": "Saturday",
+    "hour": 11,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 861,
+    "day": "Saturday",
+    "hour": 11,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 862,
+    "day": "Saturday",
+    "hour": 11,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 863,
+    "day": "Saturday",
+    "hour": 11,
+    "hotspot_id": 149,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 864,
+    "day": "Saturday",
+    "hour": 11,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 865,
+    "day": "Saturday",
+    "hour": 11,
+    "hotspot_id": 48,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 866,
+    "day": "Saturday",
+    "hour": 11,
+    "hotspot_id": 73,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 867,
+    "day": "Saturday",
+    "hour": 11,
+    "hotspot_id": 143,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 868,
+    "day": "Saturday",
+    "hour": 12,
+    "hotspot_id": 288,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 869,
+    "day": "Saturday",
+    "hour": 12,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 870,
+    "day": "Saturday",
+    "hour": 12,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 871,
+    "day": "Saturday",
+    "hour": 12,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 872,
+    "day": "Saturday",
+    "hour": 12,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 873,
+    "day": "Saturday",
+    "hour": 12,
+    "hotspot_id": 48,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 874,
+    "day": "Saturday",
+    "hour": 12,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 875,
+    "day": "Saturday",
+    "hour": 12,
+    "hotspot_id": 73,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 876,
+    "day": "Saturday",
+    "hour": 12,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 877,
+    "day": "Saturday",
+    "hour": 12,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 878,
+    "day": "Saturday",
+    "hour": 13,
+    "hotspot_id": 288,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 879,
+    "day": "Saturday",
+    "hour": 13,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 880,
+    "day": "Saturday",
+    "hour": 13,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 881,
+    "day": "Saturday",
+    "hour": 13,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 882,
+    "day": "Saturday",
+    "hour": 13,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 883,
+    "day": "Saturday",
+    "hour": 13,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 884,
+    "day": "Saturday",
+    "hour": 13,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 885,
+    "day": "Saturday",
+    "hour": 13,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 886,
+    "day": "Saturday",
+    "hour": 14,
+    "hotspot_id": 288,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 887,
+    "day": "Saturday",
+    "hour": 14,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 888,
+    "day": "Saturday",
+    "hour": 14,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 889,
+    "day": "Saturday",
+    "hour": 14,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 890,
+    "day": "Saturday",
+    "hour": 14,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 891,
+    "day": "Saturday",
+    "hour": 14,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 892,
+    "day": "Saturday",
+    "hour": 14,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 893,
+    "day": "Saturday",
+    "hour": 14,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 894,
+    "day": "Saturday",
+    "hour": 15,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 895,
+    "day": "Saturday",
+    "hour": 15,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 896,
+    "day": "Saturday",
+    "hour": 15,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 897,
+    "day": "Saturday",
+    "hour": 15,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 898,
+    "day": "Saturday",
+    "hour": 15,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 899,
+    "day": "Saturday",
+    "hour": 15,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 900,
+    "day": "Saturday",
+    "hour": 15,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 901,
+    "day": "Saturday",
+    "hour": 15,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 902,
+    "day": "Saturday",
+    "hour": 16,
+    "hotspot_id": 288,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 903,
+    "day": "Saturday",
+    "hour": 16,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 904,
+    "day": "Saturday",
+    "hour": 16,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 905,
+    "day": "Saturday",
+    "hour": 16,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 906,
+    "day": "Saturday",
+    "hour": 16,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 907,
+    "day": "Saturday",
+    "hour": 16,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 908,
+    "day": "Saturday",
+    "hour": 16,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 909,
+    "day": "Saturday",
+    "hour": 16,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 910,
+    "day": "Saturday",
+    "hour": 16,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 911,
+    "day": "Saturday",
+    "hour": 17,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 912,
+    "day": "Saturday",
+    "hour": 17,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 913,
+    "day": "Saturday",
+    "hour": 17,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 914,
+    "day": "Saturday",
+    "hour": 17,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 915,
+    "day": "Saturday",
+    "hour": 17,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 916,
+    "day": "Saturday",
+    "hour": 17,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 917,
+    "day": "Saturday",
+    "hour": 17,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 918,
+    "day": "Saturday",
+    "hour": 17,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 919,
+    "day": "Saturday",
+    "hour": 17,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 920,
+    "day": "Saturday",
+    "hour": 17,
+    "hotspot_id": 143,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 921,
+    "day": "Saturday",
+    "hour": 18,
+    "hotspot_id": 288,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 922,
+    "day": "Saturday",
+    "hour": 18,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 923,
+    "day": "Saturday",
+    "hour": 18,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 924,
+    "day": "Saturday",
+    "hour": 18,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 925,
+    "day": "Saturday",
+    "hour": 18,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 926,
+    "day": "Saturday",
+    "hour": 18,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 927,
+    "day": "Saturday",
+    "hour": 18,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 928,
+    "day": "Saturday",
+    "hour": 18,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 929,
+    "day": "Saturday",
+    "hour": 18,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 930,
+    "day": "Saturday",
+    "hour": 18,
+    "hotspot_id": 143,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 931,
+    "day": "Saturday",
+    "hour": 19,
+    "hotspot_id": 288,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 932,
+    "day": "Saturday",
+    "hour": 19,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 933,
+    "day": "Saturday",
+    "hour": 19,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 934,
+    "day": "Saturday",
+    "hour": 19,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 935,
+    "day": "Saturday",
+    "hour": 19,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 936,
+    "day": "Saturday",
+    "hour": 19,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 937,
+    "day": "Saturday",
+    "hour": 19,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 938,
+    "day": "Saturday",
+    "hour": 19,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 939,
+    "day": "Saturday",
+    "hour": 19,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 940,
+    "day": "Saturday",
+    "hour": 19,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 941,
+    "day": "Saturday",
+    "hour": 20,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 942,
+    "day": "Saturday",
+    "hour": 20,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 943,
+    "day": "Saturday",
+    "hour": 20,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 944,
+    "day": "Saturday",
+    "hour": 20,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 945,
+    "day": "Saturday",
+    "hour": 20,
+    "hotspot_id": 143,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 946,
+    "day": "Saturday",
+    "hour": 20,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 947,
+    "day": "Saturday",
+    "hour": 20,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 948,
+    "day": "Saturday",
+    "hour": 20,
+    "hotspot_id": 408,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 949,
+    "day": "Saturday",
+    "hour": 21,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 950,
+    "day": "Saturday",
+    "hour": 21,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 951,
+    "day": "Saturday",
+    "hour": 21,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 952,
+    "day": "Saturday",
+    "hour": 21,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 953,
+    "day": "Saturday",
+    "hour": 22,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 954,
+    "day": "Saturday",
+    "hour": 22,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 955,
+    "day": "Saturday",
+    "hour": 23,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 956,
+    "day": "Saturday",
+    "hour": 23,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 957,
+    "day": "Sunday",
+    "hour": 0,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 958,
+    "day": "Sunday",
+    "hour": 0,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 959,
+    "day": "Sunday",
+    "hour": 1,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 960,
+    "day": "Sunday",
+    "hour": 1,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 961,
+    "day": "Sunday",
+    "hour": 2,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 962,
+    "day": "Sunday",
+    "hour": 3,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 963,
+    "day": "Sunday",
+    "hour": 4,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 964,
+    "day": "Sunday",
+    "hour": 4,
+    "hotspot_id": 405,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 965,
+    "day": "Sunday",
+    "hour": 4,
+    "hotspot_id": 356,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 966,
+    "day": "Sunday",
+    "hour": 4,
+    "hotspot_id": 464,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 967,
+    "day": "Sunday",
+    "hour": 4,
+    "hotspot_id": 342,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 968,
+    "day": "Sunday",
+    "hour": 4,
+    "hotspot_id": 493,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 969,
+    "day": "Sunday",
+    "hour": 4,
+    "hotspot_id": 569,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 970,
+    "day": "Sunday",
+    "hour": 4,
+    "hotspot_id": 577,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 971,
+    "day": "Sunday",
+    "hour": 4,
+    "hotspot_id": 343,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 972,
+    "day": "Sunday",
+    "hour": 4,
+    "hotspot_id": 138,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 973,
+    "day": "Sunday",
+    "hour": 5,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 974,
+    "day": "Sunday",
+    "hour": 5,
+    "hotspot_id": 569,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 975,
+    "day": "Sunday",
+    "hour": 5,
+    "hotspot_id": 464,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 976,
+    "day": "Sunday",
+    "hour": 5,
+    "hotspot_id": 493,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 977,
+    "day": "Sunday",
+    "hour": 5,
+    "hotspot_id": 405,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 978,
+    "day": "Sunday",
+    "hour": 5,
+    "hotspot_id": 356,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 979,
+    "day": "Sunday",
+    "hour": 5,
+    "hotspot_id": 342,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 980,
+    "day": "Sunday",
+    "hour": 5,
+    "hotspot_id": 577,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 981,
+    "day": "Sunday",
+    "hour": 5,
+    "hotspot_id": 343,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 982,
+    "day": "Sunday",
+    "hour": 5,
+    "hotspot_id": 138,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 983,
+    "day": "Sunday",
+    "hour": 6,
+    "hotspot_id": 320,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 984,
+    "day": "Sunday",
+    "hour": 6,
+    "hotspot_id": 292,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 985,
+    "day": "Sunday",
+    "hour": 6,
+    "hotspot_id": 272,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 986,
+    "day": "Sunday",
+    "hour": 6,
+    "hotspot_id": 491,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 987,
+    "day": "Sunday",
+    "hour": 6,
+    "hotspot_id": 187,
+    "recommended_officers": 4,
+    "predicted_risk_level": "Critical"
+  },
+  {
+    "id": 988,
+    "day": "Sunday",
+    "hour": 6,
+    "hotspot_id": 461,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 989,
+    "day": "Sunday",
+    "hour": 6,
+    "hotspot_id": 569,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 990,
+    "day": "Sunday",
+    "hour": 6,
+    "hotspot_id": 342,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 991,
+    "day": "Sunday",
+    "hour": 6,
+    "hotspot_id": 493,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 992,
+    "day": "Sunday",
+    "hour": 6,
+    "hotspot_id": 464,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 993,
+    "day": "Sunday",
+    "hour": 7,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 994,
+    "day": "Sunday",
+    "hour": 7,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 995,
+    "day": "Sunday",
+    "hour": 7,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 996,
+    "day": "Sunday",
+    "hour": 7,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 997,
+    "day": "Sunday",
+    "hour": 7,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 998,
+    "day": "Sunday",
+    "hour": 7,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 999,
+    "day": "Sunday",
+    "hour": 7,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1000,
+    "day": "Sunday",
+    "hour": 8,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1001,
+    "day": "Sunday",
+    "hour": 8,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1002,
+    "day": "Sunday",
+    "hour": 8,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1003,
+    "day": "Sunday",
+    "hour": 8,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1004,
+    "day": "Sunday",
+    "hour": 8,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1005,
+    "day": "Sunday",
+    "hour": 8,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1006,
+    "day": "Sunday",
+    "hour": 8,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1007,
+    "day": "Sunday",
+    "hour": 9,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1008,
+    "day": "Sunday",
+    "hour": 9,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1009,
+    "day": "Sunday",
+    "hour": 9,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1010,
+    "day": "Sunday",
+    "hour": 9,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1011,
+    "day": "Sunday",
+    "hour": 9,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1012,
+    "day": "Sunday",
+    "hour": 9,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1013,
+    "day": "Sunday",
+    "hour": 9,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1014,
+    "day": "Sunday",
+    "hour": 9,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1015,
+    "day": "Sunday",
+    "hour": 9,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1016,
+    "day": "Sunday",
+    "hour": 9,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1017,
+    "day": "Sunday",
+    "hour": 10,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1018,
+    "day": "Sunday",
+    "hour": 10,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1019,
+    "day": "Sunday",
+    "hour": 10,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1020,
+    "day": "Sunday",
+    "hour": 10,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1021,
+    "day": "Sunday",
+    "hour": 10,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1022,
+    "day": "Sunday",
+    "hour": 10,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1023,
+    "day": "Sunday",
+    "hour": 10,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1024,
+    "day": "Sunday",
+    "hour": 10,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1025,
+    "day": "Sunday",
+    "hour": 10,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1026,
+    "day": "Sunday",
+    "hour": 10,
+    "hotspot_id": 223,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1027,
+    "day": "Sunday",
+    "hour": 11,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1028,
+    "day": "Sunday",
+    "hour": 11,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1029,
+    "day": "Sunday",
+    "hour": 11,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1030,
+    "day": "Sunday",
+    "hour": 11,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1031,
+    "day": "Sunday",
+    "hour": 11,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1032,
+    "day": "Sunday",
+    "hour": 11,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1033,
+    "day": "Sunday",
+    "hour": 11,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1034,
+    "day": "Sunday",
+    "hour": 11,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1035,
+    "day": "Sunday",
+    "hour": 11,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1036,
+    "day": "Sunday",
+    "hour": 11,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1037,
+    "day": "Sunday",
+    "hour": 12,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1038,
+    "day": "Sunday",
+    "hour": 12,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1039,
+    "day": "Sunday",
+    "hour": 12,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1040,
+    "day": "Sunday",
+    "hour": 12,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1041,
+    "day": "Sunday",
+    "hour": 12,
+    "hotspot_id": 48,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1042,
+    "day": "Sunday",
+    "hour": 12,
+    "hotspot_id": 73,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1043,
+    "day": "Sunday",
+    "hour": 12,
+    "hotspot_id": 415,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1044,
+    "day": "Sunday",
+    "hour": 12,
+    "hotspot_id": 260,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1045,
+    "day": "Sunday",
+    "hour": 12,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1046,
+    "day": "Sunday",
+    "hour": 12,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1047,
+    "day": "Sunday",
+    "hour": 13,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1048,
+    "day": "Sunday",
+    "hour": 13,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1049,
+    "day": "Sunday",
+    "hour": 13,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1050,
+    "day": "Sunday",
+    "hour": 13,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1051,
+    "day": "Sunday",
+    "hour": 13,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1052,
+    "day": "Sunday",
+    "hour": 13,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1053,
+    "day": "Sunday",
+    "hour": 13,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1054,
+    "day": "Sunday",
+    "hour": 13,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1055,
+    "day": "Sunday",
+    "hour": 13,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1056,
+    "day": "Sunday",
+    "hour": 14,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1057,
+    "day": "Sunday",
+    "hour": 14,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1058,
+    "day": "Sunday",
+    "hour": 14,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1059,
+    "day": "Sunday",
+    "hour": 14,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1060,
+    "day": "Sunday",
+    "hour": 14,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1061,
+    "day": "Sunday",
+    "hour": 14,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1062,
+    "day": "Sunday",
+    "hour": 14,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1063,
+    "day": "Sunday",
+    "hour": 14,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1064,
+    "day": "Sunday",
+    "hour": 14,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1065,
+    "day": "Sunday",
+    "hour": 15,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1066,
+    "day": "Sunday",
+    "hour": 15,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1067,
+    "day": "Sunday",
+    "hour": 15,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1068,
+    "day": "Sunday",
+    "hour": 15,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1069,
+    "day": "Sunday",
+    "hour": 15,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1070,
+    "day": "Sunday",
+    "hour": 15,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1071,
+    "day": "Sunday",
+    "hour": 15,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1072,
+    "day": "Sunday",
+    "hour": 15,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1073,
+    "day": "Sunday",
+    "hour": 15,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1074,
+    "day": "Sunday",
+    "hour": 16,
+    "hotspot_id": 288,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1075,
+    "day": "Sunday",
+    "hour": 16,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1076,
+    "day": "Sunday",
+    "hour": 16,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1077,
+    "day": "Sunday",
+    "hour": 16,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1078,
+    "day": "Sunday",
+    "hour": 16,
+    "hotspot_id": 73,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1079,
+    "day": "Sunday",
+    "hour": 16,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1080,
+    "day": "Sunday",
+    "hour": 16,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1081,
+    "day": "Sunday",
+    "hour": 16,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1082,
+    "day": "Sunday",
+    "hour": 16,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1083,
+    "day": "Sunday",
+    "hour": 16,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1084,
+    "day": "Sunday",
+    "hour": 17,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1085,
+    "day": "Sunday",
+    "hour": 17,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1086,
+    "day": "Sunday",
+    "hour": 17,
+    "hotspot_id": 188,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1087,
+    "day": "Sunday",
+    "hour": 17,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1088,
+    "day": "Sunday",
+    "hour": 17,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1089,
+    "day": "Sunday",
+    "hour": 17,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1090,
+    "day": "Sunday",
+    "hour": 17,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1091,
+    "day": "Sunday",
+    "hour": 17,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1092,
+    "day": "Sunday",
+    "hour": 17,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1093,
+    "day": "Sunday",
+    "hour": 17,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1094,
+    "day": "Sunday",
+    "hour": 18,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1095,
+    "day": "Sunday",
+    "hour": 18,
+    "hotspot_id": 308,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1096,
+    "day": "Sunday",
+    "hour": 18,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1097,
+    "day": "Sunday",
+    "hour": 18,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1098,
+    "day": "Sunday",
+    "hour": 18,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1099,
+    "day": "Sunday",
+    "hour": 18,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1100,
+    "day": "Sunday",
+    "hour": 18,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1101,
+    "day": "Sunday",
+    "hour": 18,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1102,
+    "day": "Sunday",
+    "hour": 18,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1103,
+    "day": "Sunday",
+    "hour": 18,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1104,
+    "day": "Sunday",
+    "hour": 19,
+    "hotspot_id": 14,
+    "recommended_officers": 2,
+    "predicted_risk_level": "High"
+  },
+  {
+    "id": 1105,
+    "day": "Sunday",
+    "hour": 19,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1106,
+    "day": "Sunday",
+    "hour": 19,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1107,
+    "day": "Sunday",
+    "hour": 19,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1108,
+    "day": "Sunday",
+    "hour": 19,
+    "hotspot_id": 288,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1109,
+    "day": "Sunday",
+    "hour": 19,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1110,
+    "day": "Sunday",
+    "hour": 19,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1111,
+    "day": "Sunday",
+    "hour": 19,
+    "hotspot_id": 48,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1112,
+    "day": "Sunday",
+    "hour": 19,
+    "hotspot_id": 149,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1113,
+    "day": "Sunday",
+    "hour": 19,
+    "hotspot_id": 230,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1114,
+    "day": "Sunday",
+    "hour": 20,
+    "hotspot_id": 415,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1115,
+    "day": "Sunday",
+    "hour": 20,
+    "hotspot_id": 308,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1116,
+    "day": "Sunday",
+    "hour": 21,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1117,
+    "day": "Sunday",
+    "hour": 21,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1118,
+    "day": "Sunday",
+    "hour": 21,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1119,
+    "day": "Sunday",
+    "hour": 22,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1120,
+    "day": "Sunday",
+    "hour": 22,
+    "hotspot_id": 14,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1121,
+    "day": "Sunday",
+    "hour": 22,
+    "hotspot_id": 260,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1122,
+    "day": "Sunday",
+    "hour": 22,
+    "hotspot_id": 188,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  },
+  {
+    "id": 1123,
+    "day": "Sunday",
+    "hour": 23,
+    "hotspot_id": 73,
+    "recommended_officers": 1,
+    "predicted_risk_level": "Medium"
+  }
+]

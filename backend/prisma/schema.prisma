@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Officer {
+  id                Int          @id @default(autoincrement())
+  firebase_uid      String       @unique
+  name              String
+  email             String       @unique
+  role              String
+  rank              String
+  status            String
+  lat               Float?
+  lng               Float?
+  performance_score Float        @default(0.0)
+  assignments       Assignment[]
+}
+
+model Hotspot {
+  id             Int          @id @default(autoincrement())
+  location       String
+  lat            Float
+  lng            Float
+  severity_score Float
+  risk_level     String
+  assignments    Assignment[]
+}
+
+model Violation {
+  id             Int      @id @default(autoincrement())
+  location       String
+  vehicle_type   String
+  violation_type String
+  impact_score   Float
+  timestamp      DateTime @default(now())
+}
+
+model Assignment {
+  id             Int       @id @default(autoincrement())
+  hotspot_id     Int
+  officer_id     Int
+  status         String    // pending, accepted, declined, completed
+  decline_reason String?
+  created_at     DateTime  @default(now())
+  completed_at   DateTime?
+
+  hotspot        Hotspot   @relation(fields: [hotspot_id], references: [id])
+  officer        Officer   @relation(fields: [officer_id], references: [id])
+}

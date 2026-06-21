@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kavach - Traffic Patrol & AI Deployment Admin Dashboard</title>
+  <meta name="description" content="Kavach Admin Dashboard for traffic violation hotspots, officer deployment and AI recommendations in Bengaluru.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Leaflet.js Map CSS -->
+  <link rel="stylesheet" href="css/leaflet.css" />
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <!-- Dark Glassmorphic Login Screen -->
+  <div id="loginScreen" class="login-screen">
+    <div class="card login-card">
+      <div class="brand" style="justify-content: center; margin-bottom: 2rem;">
+        <div class="logo-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="brand-name">Kavach <span>Admin</span></div>
+      </div>
+      <h2 class="card-title" id="authTitle" style="justify-content: center; margin-bottom: 0.5rem;"><i class="fa-solid fa-lock" style="color: var(--neon-blue);"></i> Secure Sign In</h2>
+      <p class="section-desc" id="authDesc" style="text-align: center; margin-bottom: 1.5rem;">AI-Powered Command & Deployment Center</p>
+      
+      <div id="loginError" class="login-error-msg" style="display: none;"></div>
+
+      <form id="loginForm">
+        <!-- Name Field (Only visible during Sign Up) -->
+        <div class="form-group" id="signUpNameGroup" style="display: none; margin-bottom: 1.25rem;">
+          <label for="loginName">Administrator Name</label>
+          <input type="text" id="loginName" class="form-control" placeholder="John Doe">
+        </div>
+
+        <div class="form-group">
+          <label for="loginEmail">Email Address</label>
+          <input type="email" id="loginEmail" class="form-control" placeholder="admin@gmail.com" required>
+        </div>
+        
+        <div class="form-group" style="margin-top: 1.25rem;">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" class="form-control" placeholder="•••••" required>
+        </div>
+
+        <!-- Confirm Password Field (Only visible during Sign Up) -->
+        <div class="form-group" id="signUpConfirmGroup" style="display: none; margin-top: 1.25rem;">
+          <label for="loginConfirmPassword">Confirm Password</label>
+          <input type="password" id="loginConfirmPassword" class="form-control" placeholder="•••••">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 2rem;" id="loginSubmitBtn">
+          <i class="fa-solid fa-right-to-bracket"></i> Sign In
+        </button>
+      </form>
+
+      <div class="auth-toggle-container" style="margin-top: 1.5rem; text-align: center; font-size: 0.85rem;">
+        <span style="color: var(--text-secondary);" id="authToggleText">Don't have an account?</span>
+        <a href="#" id="authToggleLink" style="color: var(--neon-blue); text-decoration: none; font-weight: 600; margin-left: 0.25rem;">Sign Up</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Glassmorphic Dashboard Layout -->
+  <div class="dashboard-container" id="dashboardContainer">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="mainSidebar">
+      <div class="brand">
+        <div class="logo-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="brand-name">Kavach <span>Admin</span></div>
+      </div>
+      
+      <nav class="nav-menu">
+        <a href="#" class="nav-item active" data-tab="overview">
+          <i class="fa-solid fa-chart-line"></i> <span>Overview</span>
+        </a>
+        <a href="#" class="nav-item" data-tab="map-view">
+          <i class="fa-solid fa-map-location-dot"></i> <span>Live Map</span>
+        </a>
+        <a href="#" class="nav-item" data-tab="hotspots">
+          <i class="fa-solid fa-triangle-exclamation"></i> <span>Hotspots</span>
+        </a>
+        <a href="#" class="nav-item" data-tab="officers">
+          <i class="fa-solid fa-user-shield"></i> <span>Officers</span>
+        </a>
+        <a href="#" class="nav-item" data-tab="leaderboard">
+          <i class="fa-solid fa-ranking-star"></i> <span>Leaderboard</span>
+        </a>
+        <a href="#" class="nav-item" data-tab="ai-recommendations">
+          <i class="fa-solid fa-brain"></i> <span>AI Recommendations</span>
+        </a>
+        <a href="#" class="nav-item" data-tab="simulation">
+          <i class="fa-solid fa-gamepad"></i> <span>Simulation Panel</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-profile" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div class="avatar"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="profile-info">
+              <div class="profile-name" id="profileName">Dev Admin</div>
+              <div class="profile-role">Control Center</div>
+            </div>
+          </div>
+          <button id="signOutBtn" title="Sign Out" style="background: none; border: none; color: var(--text-secondary); cursor: pointer; font-size: 1.15rem; padding: 4px; transition: color 0.2s;"><i class="fa-solid fa-right-from-bracket"></i></button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="mainContent">
+      <header class="content-header">
+        <div class="header-title">
+          <h1 id="pageTitle">Overview</h1>
+          <p id="pageSubtitle">Real-time statistics & traffic monitoring</p>
+        </div>
+        <div class="header-actions">
+          <select id="serverSelect" class="form-control" style="width: auto; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: #fff; padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.85rem; cursor: pointer;">
+            <option value="http://localhost:5000/api">Local Dev Server</option>
+            <option value="https://police-dispatch-server.onrender.com/api" selected>Remote Render Server</option>
+          </select>
+          <div class="token-status" id="authStatusIndicator">
+            <span class="pulse-indicator blue" id="authPulse"></span>
+            <span id="authStatusText">Firebase Auth Active</span>
+          </div>
+          <button class="btn btn-secondary" id="refreshBtn"><i class="fa-solid fa-arrows-rotate"></i> Sync Data</button>
+          <button class="btn btn-primary" id="seedRemoteBtn" style="display: inline-flex; margin-left: 0.5rem;"><i class="fa-solid fa-cloud-arrow-up"></i> Push Local Data</button>
+        </div>
+      </header>
+
+      <!-- TAB 1: OVERVIEW -->
+      <section class="tab-content active" id="overview-tab">
+        <!-- Stat Cards Grid -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon blue"><i class="fa-solid fa-user-shield"></i></div>
+            <div class="stat-details">
+              <h3>Total Officers</h3>
+              <p class="stat-value" id="stat-total-officers">0</p>
+            </div>
+            <span class="stat-trend green"><i class="fa-solid fa-circle-check"></i> Active</span>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon green"><i class="fa-solid fa-circle-user"></i></div>
+            <div class="stat-details">
+              <h3>Available Officers</h3>
+              <p class="stat-value" id="stat-active-officers">0</p>
+            </div>
+            <span class="stat-trend green" id="stat-active-pct">0% ready</span>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon red"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div class="stat-details">
+              <h3>Total Hotspots</h3>
+              <p class="stat-value" id="stat-total-hotspots">0</p>
+            </div>
+            <span class="stat-trend red"><i class="fa-solid fa-circle-dot"></i> Bengaluru</span>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon purple"><i class="fa-solid fa-clock-rotate-left"></i></div>
+            <div class="stat-details">
+              <h3>Active Patrols</h3>
+              <p class="stat-value" id="stat-active-assignments">0</p>
+            </div>
+            <span class="stat-trend purple"><i class="fa-solid fa-spinner fa-spin"></i> On duty</span>
+          </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-container">
+          <div class="chart-box card">
+            <h2 class="card-title">Violation Distribution by Hotspot Severity</h2>
+            <div class="chart-wrapper">
+              <canvas id="severityChart"></canvas>
+            </div>
+          </div>
+          
+          <div class="chart-box card">
+            <h2 class="card-title">Officer Distribution by Rank</h2>
+            <div class="chart-wrapper">
+              <canvas id="violationTypeChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activities list -->
+        <div class="card margin-top">
+          <h2 class="card-title">Active Deployments Dashboard</h2>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Assignment ID</th>
+                  <th>Officer</th>
+                  <th>Hotspot Location</th>
+                  <th>Assigned Coords</th>
+                  <th>Status</th>
+                  <th>Timestamp</th>
+                </tr>
+              </thead>
+              <tbody id="overview-deployments-table">
+                <tr>
+                  <td colspan="6" class="text-center">Loading deployments...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: LIVE MAP -->
+      <section class="tab-content" id="map-view-tab">
+        <div class="map-layout">
+          <div class="map-container-wrapper card">
+            <div id="liveMap"></div>
+          </div>
+          <div class="map-sidebar">
+            <div class="card height-100">
+              <h2 class="card-title">Map Filters & Legend</h2>
+              
+              <div class="legend-section">
+                <h3>Officers</h3>
+                <div class="legend-item">
+                  <span class="legend-color-box blue"></span>
+                  <span>Available (Blue Cars)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-color-box purple"></span>
+                  <span>Busy / Assigned (Purple Cars)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-color-box gray"></span>
+                  <span>Off-Duty (Gray Cars)</span>
+                </div>
+              </div>
+
+              <div class="legend-section">
+                <h3>Hotspots Severity</h3>
+                <div class="legend-item">
+                  <span class="legend-circle red"></span>
+                  <span>High (Critical areas)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-circle orange"></span>
+                  <span>Medium (Moderate areas)</span>
+                </div>
+                <div class="legend-circle-row">
+                  <span class="legend-circle yellow"></span>
+                  <span>Low (Warning areas)</span>
+                </div>
+              </div>
+
+              <div class="quick-deploy-form">
+                <h3>Manual Quick Deploy</h3>
+                <div class="form-group">
+                  <label for="mapDeployOfficer">Select Officer</label>
+                  <select id="mapDeployOfficer" class="form-control">
+                    <option value="">-- Choose Available Officer --</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="mapDeployHotspot">Select Hotspot</label>
+                  <select id="mapDeployHotspot" class="form-control">
+                    <option value="">-- Choose Hotspot --</option>
+                  </select>
+                </div>
+                <button class="btn btn-primary btn-block" id="mapDeployBtn">
+                  <i class="fa-solid fa-paper-plane"></i> Deploy Officer
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: HOTSPOTS -->
+      <section class="tab-content" id="hotspots-tab">
+        <div class="card">
+          <div class="table-header">
+            <h2 class="card-title">Traffic Violation Hotspots (Bengaluru)</h2>
+            <div class="search-filter-row">
+              <input type="text" id="hotspotSearch" placeholder="Search hotspots..." class="form-control search-input">
+              <select id="hotspotSeverityFilter" class="form-control filter-select">
+                <option value="">All Severities</option>
+                <option value="High">High Severity</option>
+                <option value="Medium">Medium Severity</option>
+                <option value="Low">Low Severity</option>
+              </select>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Location</th>
+                  <th>Severity Score</th>
+                  <th>Risk Level</th>
+                  <th>Coordinates</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="hotspots-table-body">
+                <tr>
+                  <td colspan="7" class="text-center">Loading hotspots data...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination-container" id="hotspots-pagination" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem;">
+            <div class="pagination-info" style="font-size: 0.85rem; color: var(--text-secondary);">
+              Showing <span id="hotspots-page-start">0</span>-<span id="hotspots-page-end">0</span> of <span id="hotspots-total-count">0</span> hotspots
+            </div>
+            <div class="pagination-buttons" style="display: flex; gap: 0.5rem;">
+              <button class="btn btn-secondary btn-sm" id="hotspots-prev-btn"><i class="fa-solid fa-chevron-left"></i> Prev</button>
+              <button class="btn btn-secondary btn-sm" id="hotspots-next-btn">Next <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: OFFICERS -->
+      <section class="tab-content" id="officers-tab">
+        <div class="card">
+          <div class="table-header">
+            <h2 class="card-title">Officer Directory</h2>
+            <div class="search-filter-row">
+              <input type="text" id="officerSearch" placeholder="Search officers..." class="form-control search-input">
+              <select id="officerStatusFilter" class="form-control filter-select">
+                <option value="">All Statuses</option>
+                <option value="Available">Available</option>
+                <option value="Busy">Busy</option>
+                <option value="Off-Duty">Off-Duty</option>
+              </select>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Rank</th>
+                  <th>Role</th>
+                  <th>Status</th>
+                  <th>Score</th>
+                  <th>Location</th>
+                  <th>Deploy</th>
+                </tr>
+              </thead>
+              <tbody id="officers-table-body">
+                <tr>
+                  <td colspan="8" class="text-center">Loading officers data...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination-container" id="officers-pagination" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem;">
+            <div class="pagination-info" style="font-size: 0.85rem; color: var(--text-secondary);">
+              Showing <span id="officers-page-start">0</span>-<span id="officers-page-end">0</span> of <span id="officers-total-count">0</span> officers
+            </div>
+            <div class="pagination-buttons" style="display: flex; gap: 0.5rem;">
+              <button class="btn btn-secondary btn-sm" id="officers-prev-btn"><i class="fa-solid fa-chevron-left"></i> Prev</button>
+              <button class="btn btn-secondary btn-sm" id="officers-next-btn">Next <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 5: LEADERBOARD -->
+      <section class="tab-content" id="leaderboard-tab">
+        <!-- Podium for Top 3 -->
+        <div class="podium-container">
+          <!-- 2nd Place -->
+          <div class="podium-step step-2">
+            <div class="podium-avatar silver"><i class="fa-solid fa-award"></i></div>
+            <div class="podium-name" id="podium-name-2">Officer Name</div>
+            <div class="podium-score" id="podium-score-2">92 Pts</div>
+            <div class="podium-badge badge-silver">2nd</div>
+          </div>
+          <!-- 1st Place -->
+          <div class="podium-step step-1">
+            <div class="podium-crown"><i class="fa-solid fa-crown"></i></div>
+            <div class="podium-avatar gold"><i class="fa-solid fa-trophy"></i></div>
+            <div class="podium-name" id="podium-name-1">Officer Name</div>
+            <div class="podium-score" id="podium-score-1">98 Pts</div>
+            <div class="podium-badge badge-gold">1st</div>
+          </div>
+          <!-- 3rd Place -->
+          <div class="podium-step step-3">
+            <div class="podium-avatar bronze"><i class="fa-solid fa-medal"></i></div>
+            <div class="podium-name" id="podium-name-3">Officer Name</div>
+            <div class="podium-score" id="podium-score-3">89 Pts</div>
+            <div class="podium-badge badge-bronze">3rd</div>
+          </div>
+        </div>
+
+        <!-- Leaderboard Table -->
+        <div class="card margin-top">
+          <h2 class="card-title">Performance Scores - Leaderboard</h2>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Officer Name</th>
+                  <th>Email</th>
+                  <th>Role / Title</th>
+                  <th>Score</th>
+                  <th>Performance Bar</th>
+                </tr>
+              </thead>
+              <tbody id="leaderboard-table-body">
+                <tr>
+                  <td colspan="6" class="text-center">Loading leaderboard data...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 6: AI RECOMMENDATIONS -->
+      <section class="tab-content" id="ai-recommendations-tab">
+        <div class="card">
+          <h2 class="card-title"><i class="fa-solid fa-brain"></i> AI Recommendation Engine</h2>
+          <p class="section-desc">Select a specific day and hour to view predictive deployments based on your historical violations dataset.</p>
+          
+          <div class="recommendation-controls">
+            <div class="form-group">
+              <label for="aiDaySelect">Day of the Week</label>
+              <select id="aiDaySelect" class="form-control">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="aiHourSelect">Hour of Day (0-23)</label>
+              <select id="aiHourSelect" class="form-control">
+                <!-- Javascript will populate this -->
+              </select>
+            </div>
+            <div class="form-group align-self-end">
+              <button class="btn btn-primary" id="getAiRecsBtn">
+                <i class="fa-solid fa-magnifying-glass"></i> Analyze & Recommend
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="recommendations-container margin-top">
+          <h3 class="subsection-title">AI Recommendations for <span id="selected-temporal-slot">Monday at 00:00</span></h3>
+          <div class="recs-grid" id="recommendations-grid">
+            <div class="no-data-card card">
+              <p>Select parameters above and click Analyze to generate recommendations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 7: SIMULATION PANEL -->
+      <section class="tab-content" id="simulation-tab">
+        <div class="simulation-grid">
+          
+          <!-- Simulation Action Panel -->
+          <div class="card">
+            <h2 class="card-title"><i class="fa-solid fa-sliders"></i> Simulator Actions</h2>
+            <p class="section-desc">Simulate live mobile events from the officers to test real-time dashboard reactivity.</p>
+            
+            <div class="simulation-actions-list">
+              <div class="sim-action-box">
+                <h4>Simulate Assignment Accept</h4>
+                <p>Pick a pending assignment and simulate the officer accepting it.</p>
+                <div class="form-inline margin-top">
+                  <select id="simPendingAssignments" class="form-control flex-grow">
+                    <option value="">-- Choose Pending Assignment --</option>
+                  </select>
+                  <button class="btn btn-success" id="simAcceptBtn">Accept</button>
+                </div>
+              </div>
+
+              <div class="sim-action-box margin-top">
+                <h4>Simulate Assignment Completion</h4>
+                <p>Pick an active assignment and simulate the officer completing the patrol. This updates their performance score and returns their status to 'Available'.</p>
+                <div class="form-inline margin-top">
+                  <select id="simActiveAssignments" class="form-control flex-grow">
+                    <option value="">-- Choose Active Assignment --</option>
+                  </select>
+                  <button class="btn btn-primary" id="simCompleteBtn">Complete</button>
+                </div>
+              </div>
+
+              <div class="sim-action-box margin-top">
+                <h4>Simulate Officer Location Shift</h4>
+                <p>Simulate an officer moving on patrol. This updates their GPS coordinates with a minor offset and moves their marker on the live map.</p>
+                <div class="form-inline margin-top">
+                  <select id="simOfficerList" class="form-control flex-grow">
+                    <option value="">-- Select Officer --</option>
+                  </select>
+                  <button class="btn btn-secondary" id="simMoveBtn">Move GPS</button>
+                </div>
+              </div>
+
+              <div class="sim-action-box margin-top">
+                <h4>Simulate Officer Shift Status</h4>
+                <p>Instantly update an officer's shift status (Available, Busy, Off-Duty).</p>
+                <div class="form-inline margin-top">
+                  <select id="simOfficerStatusList" class="form-control">
+                    <option value="">-- Select Officer --</option>
+                  </select>
+                  <select id="simNewStatus" class="form-control">
+                    <option value="Available">Available</option>
+                    <option value="Busy">Busy</option>
+                    <option value="Off-Duty">Off-Duty</option>
+                  </select>
+                  <button class="btn btn-secondary" id="simStatusBtn">Update</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simulator Log Panel -->
+          <div class="card height-100 flex-column">
+            <h2 class="card-title"><i class="fa-solid fa-list-check"></i> Simulation Logs</h2>
+            <div class="sim-log-console flex-grow" id="simConsole">
+              <div class="log-line system">[SYSTEM] Simulator initialized. Bypass Auth enabled.</div>
+              <div class="log-line info">[INFO] Connect to backend to sync officer GPS statuses.</div>
+            </div>
+            <button class="btn btn-danger margin-top" id="clearLogBtn">Clear Log Console</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Deploy Modal Dialog -->
+  <div class="modal" id="deployModal">
+    <div class="modal-content card">
+      <div class="modal-header">
+        <h2>Deploy Patrol Officer</h2>
+        <span class="close-modal" id="closeDeployModal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="modalHotspotId">
+        <p><strong>Hotspot:</strong> <span id="modalHotspotName">Location</span></p>
+        <p><strong>Jurisdiction:</strong> <span id="modalHotspotStation">Station</span></p>
+        
+        <div class="form-group margin-top">
+          <label for="modalOfficerSelect">Choose Available Officer</label>
+          <select id="modalOfficerSelect" class="form-control">
+            <!-- Populated via Javascript -->
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="cancelDeployModal">Cancel</button>
+        <button class="btn btn-primary" id="confirmDeployModal">Deploy Officer</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase App & Auth Compatibility SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+
+  <!-- Leaflet Map JS -->
+  <script src="js/leaflet.js"></script>
+  <!-- Chart.js -->
+  <script src="js/chart.js"></script>
+  <!-- Main Application Logic JS -->
+  <script src="js/app.js"></script>
+</body>
+</html>
