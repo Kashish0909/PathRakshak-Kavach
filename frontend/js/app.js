@@ -520,21 +520,23 @@ async function syncAllData(isSilent = false) {
     
     // Fetch all database endpoints concurrently to reduce load latency
     const promises = [
-      fetch(`${API_BASE}/dashboard/summary`, { headers: AUTH_HEADER }),
+      !isSilent ? fetch(`${API_BASE}/dashboard/summary`, { headers: AUTH_HEADER }) : Promise.resolve(null),
       shouldFetchHotspots ? fetch(`${API_BASE}/hotspots`, { headers: AUTH_HEADER }) : Promise.resolve(null),
       fetch(`${API_BASE}/officers`, { headers: AUTH_HEADER }),
-      fetch(`${API_BASE}/performance/officers`, { headers: AUTH_HEADER }),
+      !isSilent ? fetch(`${API_BASE}/performance/officers`, { headers: AUTH_HEADER }) : Promise.resolve(null),
       fetch(`${API_BASE}/assignments/active`, { headers: AUTH_HEADER })
     ];
     
     const [summaryRes, hotspotsRes, officersRes, leaderboardRes, assignmentsRes] = await Promise.all(promises);
     
     // Parse statistics summary
-    const summaryData = await summaryRes.json().catch(() => null);
-    if (!summaryRes.ok || !summaryData) {
-      throw new Error(`Summary API failed: ${(summaryData && summaryData.error) || summaryRes.statusText}`);
+    if (!isSilent && summaryRes) {
+      const summaryData = await summaryRes.json().catch(() => null);
+      if (!summaryRes.ok || !summaryData) {
+        throw new Error(`Summary API failed: ${(summaryData && summaryData.error) || summaryRes.statusText}`);
+      }
+      appData.summary = summaryData;
     }
-    appData.summary = summaryData;
     
     // Parse Hotspots (only if fetched)
     if (shouldFetchHotspots && hotspotsRes) {
@@ -553,11 +555,13 @@ async function syncAllData(isSilent = false) {
     appData.officers = officersData;
     
     // Parse Leaderboard
-    const leaderboardData = await leaderboardRes.json().catch(() => null);
-    if (!leaderboardRes.ok || !leaderboardData) {
-      throw new Error(`Leaderboard API failed: ${(leaderboardData && leaderboardData.error) || leaderboardRes.statusText}`);
+    if (!isSilent && leaderboardRes) {
+      const leaderboardData = await leaderboardRes.json().catch(() => null);
+      if (!leaderboardRes.ok || !leaderboardData) {
+        throw new Error(`Leaderboard API failed: ${(leaderboardData && leaderboardData.error) || leaderboardRes.statusText}`);
+      }
+      appData.leaderboard = leaderboardData;
     }
-    appData.leaderboard = leaderboardData;
     
     // Parse active assignments/deployments
     let assignmentsData = [];
@@ -759,13 +763,18 @@ async function uploadLocalDataToRemote() {
 
 // Stats UI updates
 function updateStatsCards() {
-  document.getElementById('stat-total-officers').innerText = appData.summary.totalOfficers || 0;
-  document.getElementById('stat-active-officers').innerText = appData.summary.activeOfficers || 0;
-  document.getElementById('stat-total-hotspots').innerText = appData.summary.totalHotspots || 0;
-  document.getElementById('stat-active-assignments').innerText = appData.summary.activeAssignments || 0;
+  const totalOfficers = appData.officers.length || appData.summary.totalOfficers || 0;
+  const activeOfficers = appData.officers.filter(o => o.status === 'Available').length || appData.summary.activeOfficers || 0;
+  const totalHotspots = appData.hotspots.length || appData.summary.totalHotspots || 0;
+  const activeAssignments = appData.deployments.filter(d => d.status === 'accepted').length || appData.summary.activeAssignments || 0;
+
+  document.getElementById('stat-total-officers').innerText = totalOfficers;
+  document.getElementById('stat-active-officers').innerText = activeOfficers;
+  document.getElementById('stat-total-hotspots').innerText = totalHotspots;
+  document.getElementById('stat-active-assignments').innerText = activeAssignments;
   
-  if (appData.summary.totalOfficers > 0) {
-    const pct = Math.round((appData.summary.activeOfficers / appData.summary.totalOfficers) * 100);
+  if (totalOfficers > 0) {
+    const pct = Math.round((activeOfficers / totalOfficers) * 100);
     document.getElementById('stat-active-pct').innerText = `${pct}% ready for dispatch`;
   }
 }
