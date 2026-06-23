@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dashboardContainer = document.getElementById('dashboardContainer');
     if (dashboardContainer && dashboardContainer.classList.contains('active')) {
       console.log('[AUTO-SYNC] Fetching latest officer statuses...');
-      syncAllData();
+      syncAllData(true);
     }
   }, 5000);
 });
@@ -503,52 +503,65 @@ function setupEventListeners() {
 }
 
 // Sync all data from backend API
-async function syncAllData() {
+async function syncAllData(isSilent = false) {
   try {
-    showLoadingIndicators();
+    if (!isSilent) {
+      showLoadingIndicators();
+    }
     
-    // Fetch statistics summary
-    const summaryRes = await fetch(`${API_BASE}/dashboard/summary`, { headers: AUTH_HEADER });
+    // Skip loading the massive hotspots list (1,931 items) if we already have it in memory
+    const shouldFetchHotspots = appData.hotspots.length === 0;
+    
+    // Fetch all database endpoints concurrently to reduce load latency
+    const promises = [
+      fetch(`${API_BASE}/dashboard/summary`, { headers: AUTH_HEADER }),
+      shouldFetchHotspots ? fetch(`${API_BASE}/hotspots`, { headers: AUTH_HEADER }) : Promise.resolve(null),
+      fetch(`${API_BASE}/officers`, { headers: AUTH_HEADER }),
+      fetch(`${API_BASE}/performance/officers`, { headers: AUTH_HEADER }),
+      fetch(`${API_BASE}/assignments/active`, { headers: AUTH_HEADER })
+    ];
+    
+    const [summaryRes, hotspotsRes, officersRes, leaderboardRes, assignmentsRes] = await Promise.all(promises);
+    
+    // Parse statistics summary
     const summaryData = await summaryRes.json().catch(() => null);
     if (!summaryRes.ok || !summaryData) {
       throw new Error(`Summary API failed: ${(summaryData && summaryData.error) || summaryRes.statusText}`);
     }
     appData.summary = summaryData;
     
-    // Fetch Hotspots
-    const hotspotsRes = await fetch(`${API_BASE}/hotspots`, { headers: AUTH_HEADER });
-    const hotspotsData = await hotspotsRes.json().catch(() => null);
-    if (!hotspotsRes.ok || !hotspotsData) {
-      throw new Error(`Hotspots API failed: ${(hotspotsData && hotspotsData.error) || hotspotsRes.statusText}`);
+    // Parse Hotspots (only if fetched)
+    if (shouldFetchHotspots && hotspotsRes) {
+      const hotspotsData = await hotspotsRes.json().catch(() => null);
+      if (!hotspotsRes.ok || !hotspotsData) {
+        throw new Error(`Hotspots API failed: ${(hotspotsData && hotspotsData.error) || hotspotsRes.statusText}`);
+      }
+      appData.hotspots = hotspotsData;
     }
-    appData.hotspots = hotspotsData;
     
-    // Fetch Officers
-    const officersRes = await fetch(`${API_BASE}/officers`, { headers: AUTH_HEADER });
+    // Parse Officers
     const officersData = await officersRes.json().catch(() => null);
     if (!officersRes.ok || !officersData) {
       throw new Error(`Officers API failed: ${(officersData && officersData.error) || officersRes.statusText}`);
     }
     appData.officers = officersData;
     
-    // Fetch Leaderboard
-    const leaderboardRes = await fetch(`${API_BASE}/performance/officers`, { headers: AUTH_HEADER });
+    // Parse Leaderboard
     const leaderboardData = await leaderboardRes.json().catch(() => null);
     if (!leaderboardRes.ok || !leaderboardData) {
       throw new Error(`Leaderboard API failed: ${(leaderboardData && leaderboardData.error) || leaderboardRes.statusText}`);
     }
     appData.leaderboard = leaderboardData;
     
-    // Fetch active assignments/deployments with a single optimized call
+    // Parse active assignments/deployments
     let assignmentsData = [];
     try {
-      const assignmentsRes = await fetch(`${API_BASE}/assignments/active`, { headers: AUTH_HEADER });
       console.log('[DEBUG] /assignments/active status:', assignmentsRes.status);
       if (assignmentsRes.ok) {
         assignmentsData = await assignmentsRes.json().catch(() => []);
         console.log('[DEBUG] /assignments/active raw response:', JSON.stringify(assignmentsData));
         console.log('[DEBUG] assignments count:', Array.isArray(assignmentsData) ? assignmentsData.length : 'NOT ARRAY');
-    } else if (assignmentsRes.status === 404) {
+      } else if (assignmentsRes.status === 404) {
         console.warn('Assignments API endpoint (/assignments/active) is missing on remote server. Falling back to local storage.');
         try {
           const localStored = localStorage.getItem('kavach_local_deployments');
@@ -617,14 +630,16 @@ async function syncAllData() {
     console.error('Data synchronization failed:', error);
     logSimEvent('error', `Data Sync Failed: ${error.message}`);
     
-    // Display error directly in table content areas instead of spinning forever
-    const tables = ['overview-deployments-table', 'hotspots-table-body', 'officers-table-body', 'leaderboard-table-body'];
-    tables.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) {
-        el.innerHTML = `<tr><td colspan="10" class="text-center text-danger"><i class="fa-solid fa-triangle-exclamation"></i> Synchronisation failed: ${error.message}</td></tr>`;
-      }
-    });
+    // Only display error rows if it's not a silent background sync
+    if (!isSilent) {
+      const tables = ['overview-deployments-table', 'hotspots-table-body', 'officers-table-body', 'leaderboard-table-body'];
+      tables.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.innerHTML = `<tr><td colspan="10" class="text-center text-danger"><i class="fa-solid fa-triangle-exclamation"></i> Synchronisation failed: ${error.message}</td></tr>`;
+        }
+      });
+    }
   }
 }
 
