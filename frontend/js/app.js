@@ -541,20 +541,55 @@ async function syncAllData() {
     let assignmentsData = [];
     try {
       const assignmentsRes = await fetch(`${API_BASE}/assignments/active`, { headers: AUTH_HEADER });
+      console.log('[DEBUG] /assignments/active status:', assignmentsRes.status);
       if (assignmentsRes.ok) {
         assignmentsData = await assignmentsRes.json().catch(() => []);
-      } else if (assignmentsRes.status === 404) {
-        console.warn('Assignments API endpoint (/assignments/active) is missing on remote server. Defaulting to empty list.');
-        logSimEvent('warn', 'Assignments API endpoint is missing on remote server. Patrol table will be empty.');
+        console.log('[DEBUG] /assignments/active raw response:', JSON.stringify(assignmentsData));
+        console.log('[DEBUG] assignments count:', Array.isArray(assignmentsData) ? assignmentsData.length : 'NOT ARRAY');
+    } else if (assignmentsRes.status === 404) {
+        console.warn('Assignments API endpoint (/assignments/active) is missing on remote server. Falling back to local storage.');
+        try {
+          const localStored = localStorage.getItem('kavach_local_deployments');
+          assignmentsData = localStored ? JSON.parse(localStored) : [];
+          
+          let changed = false;
+          assignmentsData.forEach(d => {
+            const officer = appData.officers.find(o => parseInt(o.id) === parseInt(d.officer_id));
+            if (officer) {
+              // Ignore automatic status checks if we explicitly set it to pending_assign locally to preserve PENDING status
+              if (officer.status === 'pending_assign') {
+                return;
+              }
+              // Only automatically resolve completed assignments when the officer returns to Available
+              if (officer.status === 'Available' && d.status === 'accepted') {
+                d.status = 'completed';
+                changed = true;
+              }
+            }
+          });
+          if (changed) {
+            localStorage.setItem('kavach_local_deployments', JSON.stringify(assignmentsData));
+          }
+        } catch (e) {
+          assignmentsData = [];
+        }
+        logSimEvent('info', 'Loaded active deployments from local backup storage with status resolution.');
       } else {
         const err = await assignmentsRes.json().catch(() => ({}));
+        console.error('[DEBUG] /assignments/active error response:', err);
         throw new Error(err.error || assignmentsRes.statusText || `HTTP ${assignmentsRes.status}`);
       }
     } catch (err) {
-      console.warn('Failed to fetch assignments, defaulting to empty list:', err);
-      logSimEvent('warn', `Assignments fetch failed: ${err.message}. Defaulting to empty list.`);
+      console.warn('Failed to fetch assignments, checking local storage backup:', err);
+      try {
+        const localStored = localStorage.getItem('kavach_local_deployments');
+        assignmentsData = localStored ? JSON.parse(localStored) : [];
+      } catch (e) {
+        assignmentsData = [];
+      }
     }
     appData.deployments = Array.isArray(assignmentsData) ? assignmentsData : [];
+    console.log('[DEBUG] appData.deployments set to:', appData.deployments.length, 'items');
     
     // Update Stats Card UI
     updateStatsCards();
@@ -817,6 +852,7 @@ function renderOfficersTable() {
   
   if (!tbody) return;
   
+  // Sort officers numerically by ID ascending
   const filtered = appData.officers.filter(o => {
     const matchesSearch = (o.name || '').toLowerCase().includes(query) || 
                           (o.rank || '').toLowerCase().includes(query) ||
@@ -824,7 +860,7 @@ function renderOfficersTable() {
                           (o.email || '').toLowerCase().includes(query);
     const matchesStatus = statusFilter === '' || o.status === statusFilter;
     return matchesSearch && matchesStatus;
-  });
+  }).sort((a, b) => parseInt(a.id) - parseInt(b.id));
   
   const total = filtered.length;
   const page = appData.officersPage;
@@ -859,7 +895,7 @@ function renderOfficersTable() {
     
     return `
       <tr>
-        <td><strong>#OFF-${o.id}</strong></td>
+        <td><strong>${o.firebase_uid || `OFF-${o.id}`}</strong></td>
         <td>${o.name || 'Unknown'}</td>
         <td>${o.email || 'N/A'}</td>
         <td>${o.rank || 'Unknown'}</td>
@@ -925,27 +961,38 @@ function renderOverviewDeploymentsTable() {
   const tbody = document.getElementById('overview-deployments-table');
   if (!tbody) return;
   
-  if (appData.deployments.length === 0) {
+  // Filter to pending/accepted/declined (exclude completed)
+  const active = (appData.deployments || []).filter(d => d.status === 'pending' || d.status === 'accepted' || d.status === 'declined' || d.status === 'rejected');
+  
+  if (active.length === 0) {
     tbody.innerHTML = `<tr><td colspan="6" class="text-center text-muted">No active or pending patrols at the moment. Use the 'Simulation Panel' or 'Hotspots' to deploy officers!</td></tr>`;
     return;
   }
   
-  tbody.innerHTML = appData.deployments.map(d => {
-    const officer = appData.officers.find(o => o.id === d.officer_id);
-    const hotspot = appData.hotspots.find(h => h.id === d.hotspot_id);
+  tbody.innerHTML = active.map(d => {
+    // Use nested objects from API response first (remote server includes them),
+    // then fall back to appData lookup with parseInt to avoid type mismatch.
+    const officer = d.officer || appData.officers.find(o => parseInt(o.id) === parseInt(d.officer_id));
+    const hotspot = d.hotspot || appData.hotspots.find(h => parseInt(h.id) === parseInt(d.hotspot_id));
     
     let statusClass = 'badge-orange';
     if (d.status === 'accepted') statusClass = 'badge-purple';
     if (d.status === 'completed') statusClass = 'badge-green';
+    if (d.status === 'declined' || d.status === 'rejected') statusClass = 'badge-red';
     
-    const time = new Date(d.created_at).toLocaleTimeString();
+    const time = d.created_at ? new Date(d.created_at).toLocaleTimeString() : 'N/A';
+    const officerName = officer ? (officer.name || 'Unknown') : `Officer #${d.officer_id}`;
+    const hotspotLocation = hotspot ? (hotspot.location || hotspot.name || 'Unknown') : `Hotspot #${d.hotspot_id}`;
+    const coords = (hotspot && hotspot.lat != null && hotspot.lng != null)
+      ? `${parseFloat(hotspot.lat).toFixed(4)}, ${parseFloat(hotspot.lng).toFixed(4)}`
+      : 'N/A';
     
     return `
       <tr>
         <td><strong>#ASM-${d.id}</strong></td>
-        <td>${officer ? (officer.name || 'Unknown') : `Officer #${d.officer_id}`}</td>
-        <td>${hotspot ? (hotspot.location || 'Unknown') : `Hotspot #${d.hotspot_id}`}</td>
-        <td>${hotspot && hotspot.lat !== null && hotspot.lat !== undefined && hotspot.lng !== null && hotspot.lng !== undefined ? `${hotspot.lat.toFixed(4)}, ${hotspot.lng.toFixed(4)}` : 'N/A'}</td>
+        <td>${officerName}</td>
+        <td>${hotspotLocation}</td>
+        <td>${coords}</td>
         <td><span class="badge ${statusClass}">${d.status || 'pending'}</span></td>
         <td>${time}</td>
       </tr>
@@ -986,17 +1033,17 @@ function populateSimulationDropdowns() {
   // Pending
   pendingSelect.innerHTML = '<option value="">-- Choose Pending Assignment --</option>';
   appData.deployments.filter(d => d.status === 'pending').forEach(d => {
-    const o = appData.officers.find(o => o.id === d.officer_id);
-    const h = appData.hotspots.find(h => h.id === d.hotspot_id);
-    pendingSelect.innerHTML += `<option value="${d.id}">Assignment #${d.id}: ${o ? o.name : `Officer #${d.officer_id}`} -> ${h ? h.name : `Hotspot #${d.hotspot_id}`}</option>`;
+    const o = d.officer || appData.officers.find(o => parseInt(o.id) === parseInt(d.officer_id));
+    const h = d.hotspot || appData.hotspots.find(h => parseInt(h.id) === parseInt(d.hotspot_id));
+    pendingSelect.innerHTML += `<option value="${d.id}">Assignment #${d.id}: ${o ? o.name : `Officer #${d.officer_id}`} -> ${h ? (h.location || h.name || `Hotspot #${d.hotspot_id}`) : `Hotspot #${d.hotspot_id}`}</option>`;
   });
 
   // Active (Accepted)
   activeSelect.innerHTML = '<option value="">-- Choose Active Assignment --</option>';
   appData.deployments.filter(d => d.status === 'accepted').forEach(d => {
-    const o = appData.officers.find(o => o.id === d.officer_id);
-    const h = appData.hotspots.find(h => h.id === d.hotspot_id);
-    activeSelect.innerHTML += `<option value="${d.id}">Assignment #${d.id}: ${o ? o.name : `Officer #${d.officer_id}`} -> ${h ? h.name : `Hotspot #${d.hotspot_id}`}</option>`;
+    const o = d.officer || appData.officers.find(o => parseInt(o.id) === parseInt(d.officer_id));
+    const h = d.hotspot || appData.hotspots.find(h => parseInt(h.id) === parseInt(d.hotspot_id));
+    activeSelect.innerHTML += `<option value="${d.id}">Assignment #${d.id}: ${o ? o.name : `Officer #${d.officer_id}`} -> ${h ? (h.location || h.name || `Hotspot #${d.hotspot_id}`) : `Hotspot #${d.hotspot_id}`}</option>`;
   });
   
   // All officers for movement simulation
@@ -1151,19 +1198,41 @@ async function executeDeployment(hotspotId, officerId) {
     
     const assignment = await res.json();
     
-    // Log in Simulation panel console
-    const officer = appData.officers.find(o => o.id === parseInt(officerId));
-    const hotspot = appData.hotspots.find(h => h.id === parseInt(hotspotId));
-    logSimEvent('success', `[DEPLOY] Created Assignment #${assignment.id}: ${officer ? officer.name : `Officer #${officerId}`} dispatched to ${hotspot ? hotspot.name : `Hotspot #${hotspotId}`}`);
+    // Save to local storage cache backup
+    try {
+      const localStored = localStorage.getItem('kavach_local_deployments');
+      const deploymentsList = localStored ? JSON.parse(localStored) : [];
+      // Ensure we don't save duplicates
+      if (!deploymentsList.some(d => d.id === assignment.id)) {
+        deploymentsList.push(assignment);
+        localStorage.setItem('kavach_local_deployments', JSON.stringify(deploymentsList));
+      }
+    } catch (e) {
+      console.warn('Could not cache assignment in local storage:', e);
+    }
+    
+    // Use nested officer/hotspot from assignment response, fallback to appData
+    const officer = assignment.officer || appData.officers.find(o => parseInt(o.id) === parseInt(officerId));
+    if (officer) {
+      // Force status to "pending_assign" locally to delay showing ACCEPTED status until officer updates app
+      officer.status = 'pending_assign';
+    }
+    const hotspot = assignment.hotspot || appData.hotspots.find(h => parseInt(h.id) === parseInt(hotspotId));
+    const officerName = officer ? officer.name : `Officer #${officerId}`;
+    const hotspotName = hotspot ? (hotspot.location || hotspot.name || `Hotspot #${hotspotId}`) : `Hotspot #${hotspotId}`;
+    logSimEvent('success', `[DEPLOY] Created Assignment #${assignment.id}: ${officerName} dispatched to ${hotspotName}`);
     
     // Close modal if open
     closeDeployModal();
     
-    // Sync data immediately
+    // Navigate to Overview tab so user sees the Active Deployments Dashboard update
+    const overviewNavBtn = document.querySelector('[data-tab="overview"]');
+    if (overviewNavBtn) overviewNavBtn.click();
+    
+    // Sync data to refresh Active Deployments Dashboard
     syncAllData();
     
-    // Switch to simulation or overview tab if needed, but alerting is enough
-    alert(`Success: Dispatched ${officer ? officer.name : `Officer #${officerId}`} to hotspot!`);
+    alert(`✅ Dispatched ${officerName} to ${hotspotName}!\n\nCheck the Overview tab for the Active Deployments Dashboard.`);
     
   } catch (error) {
     alert(`Error deploying officer: ${error.message}`);
@@ -1456,16 +1525,10 @@ function updateCharts() {
     });
   }
 
-  // 2. Officer Rank Distribution (repurposing violationTypeChart)
-  const rankCounts = {};
-  appData.officers.forEach(o => {
-    if (o.rank) {
-      rankCounts[o.rank] = (rankCounts[o.rank] || 0) + 1;
-    }
-  });
-
-  const sortedRanks = Object.entries(rankCounts)
-    .sort((a,b) => b[1] - a[1])
+  // 2. High Risk Hotspot Regions (Top 5 highest severity scores)
+  const highRiskHotspots = appData.hotspots
+    .filter(h => h.risk_level === 'High' || h.severity_score >= 7.0)
+    .sort((a, b) => b.severity_score - a.severity_score)
     .slice(0, 5);
 
   const typeCtx = document.getElementById('violationTypeChart');
@@ -1475,12 +1538,12 @@ function updateCharts() {
     violationTypeChart = new Chart(typeCtx, {
       type: 'bar',
       data: {
-        labels: sortedRanks.map(e => e[0]),
+        labels: highRiskHotspots.map(h => h.location.split(' - ')[1] || h.location),
         datasets: [{
-          label: 'Number of Officers',
-          data: sortedRanks.map(e => e[1]),
-          backgroundColor: 'rgba(0, 242, 254, 0.45)',
-          borderColor: '#00f2fe',
+          label: 'Severity Score',
+          data: highRiskHotspots.map(h => h.severity_score),
+          backgroundColor: 'rgba(255, 65, 108, 0.45)', // Neon Red translucent
+          borderColor: '#ff416c',
           borderWidth: 1.5
         }]
       },
@@ -1539,6 +1602,21 @@ async function simulateAcceptAssignment() {
     if (!res.ok) throw new Error('Accept failed in controller');
     const data = await res.json();
     
+    // Update state inside local storage backup
+    try {
+      const localStored = localStorage.getItem('kavach_local_deployments');
+      if (localStored) {
+        const deploymentsList = JSON.parse(localStored);
+        const match = deploymentsList.find(d => parseInt(d.id) === parseInt(assignmentId));
+        if (match) {
+          match.status = 'accepted';
+          localStorage.setItem('kavach_local_deployments', JSON.stringify(deploymentsList));
+        }
+      }
+    } catch (e) {
+      console.warn(e);
+    }
+    
     logSimEvent('success', `[MOBILE] Officer accepted Assignment #${assignmentId}. Shift state modified to Busy.`);
     syncAllData();
   } catch (error) {
@@ -1563,6 +1641,21 @@ async function simulateCompleteAssignment() {
     
     if (!res.ok) throw new Error('Completion failed in controller');
     const data = await res.json();
+    
+    // Update state inside local storage backup
+    try {
+      const localStored = localStorage.getItem('kavach_local_deployments');
+      if (localStored) {
+        const deploymentsList = JSON.parse(localStored);
+        const match = deploymentsList.find(d => parseInt(d.id) === parseInt(assignmentId));
+        if (match) {
+          match.status = 'completed';
+          localStorage.setItem('kavach_local_deployments', JSON.stringify(deploymentsList));
+        }
+      }
+    } catch (e) {
+      console.warn(e);
+    }
     
     logSimEvent('success', `[MOBILE] Officer completed patrol on Assignment #${assignmentId}. Performance score increased +2. Status: Available.`);
     syncAllData();
