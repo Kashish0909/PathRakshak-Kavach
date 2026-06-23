@@ -490,14 +490,7 @@ function setupEventListeners() {
   document.getElementById('cancelDeployModal').addEventListener('click', closeDeployModal);
   document.getElementById('confirmDeployModal').addEventListener('click', handleModalDeploymentConfirm);
 
-  // Simulation controls
-  document.getElementById('simAcceptBtn').addEventListener('click', simulateAcceptAssignment);
-  document.getElementById('simCompleteBtn').addEventListener('click', simulateCompleteAssignment);
-  document.getElementById('simMoveBtn').addEventListener('click', simulateOfficerMovement);
-  document.getElementById('simStatusBtn').addEventListener('click', simulateStatusChange);
-  document.getElementById('clearLogBtn').addEventListener('click', () => {
-    document.getElementById('simConsole').innerHTML = '';
-  });
+
 }
 
 // Sync all data from backend API
@@ -602,7 +595,6 @@ async function syncAllData() {
     
     // Setup select options for manual deployment
     populateDeploymentSelects();
-    populateSimulationDropdowns();
     
     // Update Charts
     updateCharts();
@@ -1021,39 +1013,7 @@ function populateDeploymentSelects() {
   });
 }
 
-// Populate simulation dashboard dropdowns
-function populateSimulationDropdowns() {
-  const pendingSelect = document.getElementById('simPendingAssignments');
-  const activeSelect = document.getElementById('simActiveAssignments');
-  const officerListSelect = document.getElementById('simOfficerList');
-  const officerStatusSelect = document.getElementById('simOfficerStatusList');
-  
-  if (!pendingSelect || !activeSelect) return;
-  
-  // Pending
-  pendingSelect.innerHTML = '<option value="">-- Choose Pending Assignment --</option>';
-  appData.deployments.filter(d => d.status === 'pending').forEach(d => {
-    const o = d.officer || appData.officers.find(o => parseInt(o.id) === parseInt(d.officer_id));
-    const h = d.hotspot || appData.hotspots.find(h => parseInt(h.id) === parseInt(d.hotspot_id));
-    pendingSelect.innerHTML += `<option value="${d.id}">Assignment #${d.id}: ${o ? o.name : `Officer #${d.officer_id}`} -> ${h ? (h.location || h.name || `Hotspot #${d.hotspot_id}`) : `Hotspot #${d.hotspot_id}`}</option>`;
-  });
 
-  // Active (Accepted)
-  activeSelect.innerHTML = '<option value="">-- Choose Active Assignment --</option>';
-  appData.deployments.filter(d => d.status === 'accepted').forEach(d => {
-    const o = d.officer || appData.officers.find(o => parseInt(o.id) === parseInt(d.officer_id));
-    const h = d.hotspot || appData.hotspots.find(h => parseInt(h.id) === parseInt(d.hotspot_id));
-    activeSelect.innerHTML += `<option value="${d.id}">Assignment #${d.id}: ${o ? o.name : `Officer #${d.officer_id}`} -> ${h ? (h.location || h.name || `Hotspot #${d.hotspot_id}`) : `Hotspot #${d.hotspot_id}`}</option>`;
-  });
-  
-  // All officers for movement simulation
-  officerListSelect.innerHTML = '<option value="">-- Select Officer --</option>';
-  officerStatusSelect.innerHTML = '<option value="">-- Select Officer --</option>';
-  appData.officers.forEach(o => {
-    officerListSelect.innerHTML += `<option value="${o.id}">${o.name} (${o.badge_number} - ${o.status})</option>`;
-    officerStatusSelect.innerHTML += `<option value="${o.id}">${o.name} (${o.badge_number})</option>`;
-  });
-}
 
 // AI recommendations engine fetch
 async function fetchAiRecommendations() {
@@ -1562,173 +1522,7 @@ function updateCharts() {
   }
 }
 
-// SIMULATOR LOGIC
+// Console Logging Fallback instead of Simulation Console
 function logSimEvent(type, message) {
-  const consoleEl = document.getElementById('simConsole');
-  if (!consoleEl) return;
-  
-  const time = new Date().toLocaleTimeString();
-  const logLine = document.createElement('div');
-  logLine.className = `log-line ${type}`;
-  
-  let prefix = '[INFO]';
-  if (type === 'system') prefix = '[SYSTEM]';
-  else if (type === 'success') prefix = '[SUCCESS]';
-  else if (type === 'error') prefix = '[ERROR]';
-  else if (type === 'warn') prefix = '[WARNING]';
-  
-  logLine.innerText = `${time} ${prefix} ${message}`;
-  consoleEl.appendChild(logLine);
-  
-  // Scroll to bottom
-  consoleEl.scrollTop = consoleEl.scrollHeight;
-}
-
-// Sim Event: Accept Assignment
-async function simulateAcceptAssignment() {
-  const assignmentId = document.getElementById('simPendingAssignments').value;
-  if (!assignmentId) {
-    alert('Please select a pending assignment.');
-    return;
-  }
-  
-  try {
-    const res = await fetch(`${API_BASE}/assignments/accept`, {
-      method: 'POST',
-      headers: AUTH_HEADER,
-      body: JSON.stringify({ assignment_id: assignmentId })
-    });
-    
-    if (!res.ok) throw new Error('Accept failed in controller');
-    const data = await res.json();
-    
-    // Update state inside local storage backup
-    try {
-      const localStored = localStorage.getItem('kavach_local_deployments');
-      if (localStored) {
-        const deploymentsList = JSON.parse(localStored);
-        const match = deploymentsList.find(d => parseInt(d.id) === parseInt(assignmentId));
-        if (match) {
-          match.status = 'accepted';
-          localStorage.setItem('kavach_local_deployments', JSON.stringify(deploymentsList));
-        }
-      }
-    } catch (e) {
-      console.warn(e);
-    }
-    
-    logSimEvent('success', `[MOBILE] Officer accepted Assignment #${assignmentId}. Shift state modified to Busy.`);
-    syncAllData();
-  } catch (error) {
-    logSimEvent('error', `Simulation failed: ${error.message}`);
-  }
-}
-
-// Sim Event: Complete Assignment
-async function simulateCompleteAssignment() {
-  const assignmentId = document.getElementById('simActiveAssignments').value;
-  if (!assignmentId) {
-    alert('Please select an active assignment.');
-    return;
-  }
-  
-  try {
-    const res = await fetch(`${API_BASE}/assignments/complete`, {
-      method: 'POST',
-      headers: AUTH_HEADER,
-      body: JSON.stringify({ assignment_id: assignmentId })
-    });
-    
-    if (!res.ok) throw new Error('Completion failed in controller');
-    const data = await res.json();
-    
-    // Update state inside local storage backup
-    try {
-      const localStored = localStorage.getItem('kavach_local_deployments');
-      if (localStored) {
-        const deploymentsList = JSON.parse(localStored);
-        const match = deploymentsList.find(d => parseInt(d.id) === parseInt(assignmentId));
-        if (match) {
-          match.status = 'completed';
-          localStorage.setItem('kavach_local_deployments', JSON.stringify(deploymentsList));
-        }
-      }
-    } catch (e) {
-      console.warn(e);
-    }
-    
-    logSimEvent('success', `[MOBILE] Officer completed patrol on Assignment #${assignmentId}. Performance score increased +2. Status: Available.`);
-    syncAllData();
-  } catch (error) {
-    logSimEvent('error', `Simulation failed: ${error.message}`);
-  }
-}
-
-// Sim Event: Move Officer location
-async function simulateOfficerMovement() {
-  const officerId = document.getElementById('simOfficerList').value;
-  if (!officerId) {
-    alert('Please select an officer.');
-    return;
-  }
-  
-  const officer = appData.officers.find(o => o.id === parseInt(officerId));
-  if (!officer) return;
-  
-  // Create a random walk move (approx 100 - 300 meters)
-  const offsetLat = (Math.random() - 0.5) * 0.003;
-  const offsetLng = (Math.random() - 0.5) * 0.003;
-  const newLat = officer.lat + offsetLat;
-  const newLng = officer.lng + offsetLng;
-  
-  try {
-    const res = await fetch(`${API_BASE}/officers/location`, {
-      method: 'POST',
-      headers: AUTH_HEADER,
-      body: JSON.stringify({
-        officer_id: officer.id,
-        lat: newLat,
-        lng: newLng
-      })
-    });
-    
-    if (!res.ok) throw new Error('Location update failed');
-    
-    logSimEvent('info', `[MOBILE] Officer ${officer.name} (${officer.badge_number}) GPS updated: ${newLat.toFixed(5)}, ${newLng.toFixed(5)}`);
-    syncAllData();
-  } catch (error) {
-    logSimEvent('error', `Simulation failed: ${error.message}`);
-  }
-}
-
-// Sim Event: Change Shift Status
-async function simulateStatusChange() {
-  const officerId = document.getElementById('simOfficerStatusList').value;
-  const status = document.getElementById('simNewStatus').value;
-  
-  if (!officerId || !status) {
-    alert('Please select both an officer and a new status.');
-    return;
-  }
-  
-  const officer = appData.officers.find(o => o.id === parseInt(officerId));
-  if (!officer) return;
-  
-  try {
-    const res = await fetch(`${API_BASE}/officers/status`, {
-      method: 'PUT',
-      headers: AUTH_HEADER,
-      body: JSON.stringify({
-        officer_id: officer.id,
-        status: status
-      })
-    });
-    
-    if (!res.ok) throw new Error('Status update failed');
-    
-    logSimEvent('warn', `[SHIFT] Modified officer ${officer.name} status manually to: ${status}`);
-    syncAllData();
-  } catch (error) {
-    logSimEvent('error', `Simulation failed: ${error.message}`);
-  }
+  console.log(`[${type.toUpperCase()}] ${message}`);
 }

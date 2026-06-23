@@ -98,9 +98,6 @@
         <a href="#" class="nav-item" data-tab="ai-recommendations">
           <i class="fa-solid fa-brain"></i> <span>AI Recommendations</span>
         </a>
-        <a href="#" class="nav-item" data-tab="simulation">
-          <i class="fa-solid fa-gamepad"></i> <span>Simulation Panel</span>
-        </a>
       </nav>
 
       <div class="sidebar-footer">
@@ -477,78 +474,7 @@
         </div>
       </section>
 
-      <!-- TAB 7: SIMULATION PANEL -->
-      <section class="tab-content" id="simulation-tab">
-        <div class="simulation-grid">
-          
-          <!-- Simulation Action Panel -->
-          <div class="card">
-            <h2 class="card-title"><i class="fa-solid fa-sliders"></i> Simulator Actions</h2>
-            <p class="section-desc">Simulate live mobile events from the officers to test real-time dashboard reactivity.</p>
-            
-            <div class="simulation-actions-list">
-              <div class="sim-action-box">
-                <h4>Simulate Assignment Accept</h4>
-                <p>Pick a pending assignment and simulate the officer accepting it.</p>
-                <div class="form-inline margin-top">
-                  <select id="simPendingAssignments" class="form-control flex-grow">
-                    <option value="">-- Choose Pending Assignment --</option>
-                  </select>
-                  <button class="btn btn-success" id="simAcceptBtn">Accept</button>
-                </div>
-              </div>
 
-              <div class="sim-action-box margin-top">
-                <h4>Simulate Assignment Completion</h4>
-                <p>Pick an active assignment and simulate the officer completing the patrol. This updates their performance score and returns their status to 'Available'.</p>
-                <div class="form-inline margin-top">
-                  <select id="simActiveAssignments" class="form-control flex-grow">
-                    <option value="">-- Choose Active Assignment --</option>
-                  </select>
-                  <button class="btn btn-primary" id="simCompleteBtn">Complete</button>
-                </div>
-              </div>
-
-              <div class="sim-action-box margin-top">
-                <h4>Simulate Officer Location Shift</h4>
-                <p>Simulate an officer moving on patrol. This updates their GPS coordinates with a minor offset and moves their marker on the live map.</p>
-                <div class="form-inline margin-top">
-                  <select id="simOfficerList" class="form-control flex-grow">
-                    <option value="">-- Select Officer --</option>
-                  </select>
-                  <button class="btn btn-secondary" id="simMoveBtn">Move GPS</button>
-                </div>
-              </div>
-
-              <div class="sim-action-box margin-top">
-                <h4>Simulate Officer Shift Status</h4>
-                <p>Instantly update an officer's shift status (Available, Busy, Off-Duty).</p>
-                <div class="form-inline margin-top">
-                  <select id="simOfficerStatusList" class="form-control">
-                    <option value="">-- Select Officer --</option>
-                  </select>
-                  <select id="simNewStatus" class="form-control">
-                    <option value="Available">Available</option>
-                    <option value="Busy">Busy</option>
-                    <option value="Off-Duty">Off-Duty</option>
-                  </select>
-                  <button class="btn btn-secondary" id="simStatusBtn">Update</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Simulator Log Panel -->
-          <div class="card height-100 flex-column">
-            <h2 class="card-title"><i class="fa-solid fa-list-check"></i> Simulation Logs</h2>
-            <div class="sim-log-console flex-grow" id="simConsole">
-              <div class="log-line system">[SYSTEM] Simulator initialized. Bypass Auth enabled.</div>
-              <div class="log-line info">[INFO] Connect to backend to sync officer GPS statuses.</div>
-            </div>
-            <button class="btn btn-danger margin-top" id="clearLogBtn">Clear Log Console</button>
-          </div>
-        </div>
-      </section>
     </main>
   </div>
 
