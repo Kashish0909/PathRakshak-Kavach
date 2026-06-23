@@ -502,8 +502,14 @@ function setupEventListeners() {
 
 }
 
+let isSyncing = false;
 // Sync all data from backend API
 async function syncAllData(isSilent = false) {
+  if (isSyncing) {
+    console.log('[SYNC] Synchronization already in progress. Skipping overlapping call.');
+    return;
+  }
+  isSyncing = true;
   try {
     if (!isSilent) {
       showLoadingIndicators();
@@ -640,6 +646,8 @@ async function syncAllData(isSilent = false) {
         }
       });
     }
+  } finally {
+    isSyncing = false;
   }
 }
 
