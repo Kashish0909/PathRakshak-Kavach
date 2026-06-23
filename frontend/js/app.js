@@ -76,6 +76,15 @@ document.addEventListener('DOMContentLoaded', () => {
   setupHourSelector();
   setupEventListeners();
   setupAuthListeners();
+
+  // Auto-sync dashboard data every 5 seconds to reflect live officer actions (accept/reject)
+  setInterval(() => {
+    const dashboardContainer = document.getElementById('dashboardContainer');
+    if (dashboardContainer && dashboardContainer.classList.contains('active')) {
+      console.log('[AUTO-SYNC] Fetching latest officer statuses...');
+      syncAllData();
+    }
+  }, 5000);
 });
 
 // Setup Firebase Auth State and Login/Sign-Out Events
